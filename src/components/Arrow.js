@@ -2,9 +2,11 @@
 import  React from 'react';
 
 export default function Arrow(props) {
+  // debugger;
   return (
-    <div className="header__content-arrow">
-    <div></div>
+    <div className='arrow' style={props.margin}>
+
+    <div style={props.border}></div>
   </div>
   )
 }

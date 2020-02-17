@@ -4,7 +4,7 @@ import HeaderContent from './HeaderContent';
 
 
 export default function Header(props) {
-  debugger;
+  // debugger;
   return (
     
     <header className="header">

@@ -3,7 +3,7 @@ import ListLink from './ListLink';
 
 export default function Nav(props) {
   const listItem = props.linkName.map((item) => <ListLink linkName = {item} key = {item} />)
-  debugger;
+  // debugger;
   return (
     <nav className="header__nav">
     <ul className="header__link">

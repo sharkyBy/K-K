@@ -5,7 +5,7 @@ import LangLink from './LangLink';
 
 
 export default function Lang(props) {
-  debugger;
+  // debugger;
   const langName = props.langName.map((item) =>
     (
       <LangLink langName={item.lang} idName={item.id} key={item.id} />

@@ -5,7 +5,7 @@ import Lang from './Lang';
 
 
 export default function Navigation(props) {
-  debugger;
+  // debugger;
   return (
     <div className="header__navigation" id='Mainpage'>
       <div className="header__logo">K&K</div>

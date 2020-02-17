@@ -4,11 +4,11 @@ import Main from './Main';
 
 
 function App(props) {
-  debugger;
+  // debugger;
   return (
     <Fragment>
-      <Header data={props.state.header} />
-      <Main />
+      <Header data={props.staticData.header} />
+      <Main data={props.staticData.main}/>
     </Fragment>
 
   );
