@@ -1,14 +1,17 @@
 import React, { Fragment } from 'react';
-import Header from './Header';
+import Header from './header/Header';
 import Main from './Main';
+
 
 
 function App(props) {
   // debugger;
+  
+
   return (
     <Fragment>
       <Header data={props.staticData.header} />
-      <Main data={props.staticData.main}/>
+      <Main data={props.staticData.main} />
     </Fragment>
 
   );

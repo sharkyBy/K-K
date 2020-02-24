@@ -5,15 +5,19 @@ import HeaderContent from './HeaderContent';
 
 export default function Header(props) {
   // debugger;
+  
   return (
-    
+
     <header className="header">
-      <Navigation data={props.data.navigation}/>
-      <HeaderContent data={props.data.content}/>     
+      <div className='header__container' >
+        <Navigation data={props.data.navigation} />
+        <HeaderContent data={props.data.content} />
+      </div>
+
     </header>
-  
+
   )
-  
+
 }
 
 

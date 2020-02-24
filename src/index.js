@@ -5,5 +5,7 @@ import App from './components/App';
 import {staticData} from './staticData.js';
 
 
-ReactDOM.render(<App staticData = {staticData}/>, document.getElementById('root'));
+
+ReactDOM.render(<App  staticData = {staticData} />, 
+  document.getElementById('root'));
 

@@ -1,7 +1,7 @@
 export const staticData = {
   header: {
     navigation: {
-      page: ['Mainpage', 'Training'],
+      page: ['mainpage', 'community'],
       lang: [
         {
           lang: 'ENG',
@@ -10,43 +10,103 @@ export const staticData = {
         {
           lang: 'РУС',
           id: 'ru'
-        }
-      ]
+        },
+
+
+      ],
+
+      btnName: 'contact us',
+
 
     },
-    content:{
-      title:'K&K',
-      partnerLink:'https://ottolo.com/',
-      partnerLogo:'./img/ottolo-logo-little-down.png',
-      partnerText:'exclusive partner in the usa',
+    content: {
+      companyLogo: './img/k-and-k-logo.svg',
+      partnerLink: 'https://ottolo.com/',
+      partnerLogo: './img/partnerLogo.png',
+      partnerText: 'exclusive partner in the usa',
 
     }
   },
 
   main: {
-    aboutUs:{
-      text:{
-        title:'about us',
-        p:''
+    aboutUs: {
+      text: {
+        title: 'about us',
+        p1: `K&K TEAM is a team of experienced IT specialists, designers and digital marketers.\r
+            Development of chat bots, mobile and web applications;
+            Creation of websites on CMS;
+            Design of corporate identity, logo and design prototypes;
+            Design of advertising materials for social networks and printing.\r
+            Our customer works with a well-coordinated team, not scattered performers.
+            Also thanks to the network of partner companies, the customer reduces the 
+            time to search for performers in related areas: hosting, accounting and legal 
+            services, SEO-promotion and advertising. \r
+            We worked with customers from Belarus, Russia, USA, Israel and Qatar.
+            We are not only engaged in commerce, but also develop IT education in our home country.`
+
+
+
       },
 
       carousel: {
         imgSrc: [
-          './img/webApps.png',
-          './img/CMS.png',
-          './img/mobile.png',
-          './img/webDesign.png',
-          './img/graphicDesign.png',
-          './img/SMM.png'
+          './img/team.png',
+          './img/webDevelopment.png',
+          './img/mobileDevelopment.png',
+          './img/design.png'
         ]
-        
-      },
 
+      }
+
+    },
+    project: {
+      cards: [
+        {
+          srcImg: './img/Cards/1.png',
+          title: 'fixline website',
+          p: `In two days we developed the design, developed and rolled out the production site
+              for car rental service with the driver FixLine, including the mobile version`,
+          link: 'fixline.by'
+        },
+        {
+          srcImg: './img/Cards/2.png',
+          title: 'meniwim webapp',
+          p: `Development and support of a web application for an Israeli commercial real 
+              estate agent`,
+          link: 'menivim.net'
+        },
+        {
+          srcImg: './img/Cards/2.png',
+          title: 'meniwim webapp',
+          p: `Development and support of a web application for an Israeli commercial real 
+              estate agent`,
+          link: 'menivim.net'
+        },
+        {
+          srcImg: './img/Cards/2.png',
+          title: 'meniwim webapp',
+          p: `Development and support of a web application for an Israeli commercial real 
+              estate agent`,
+          link: 'menivim.net'
+        },
+        {
+          srcImg: './img/Cards/2.png',
+          title: 'meniwim webapp',
+          p: `Development and support of a web application for an Israeli commercial real 
+              estate agent`,
+          link: 'menivim.net'
+        },
+        {
+          srcImg: './img/Cards/2.png',
+          title: 'meniwim webapp',
+          p: `Development and support of a web application for an Israeli commercial real 
+              estate agent`,
+          link: 'menivim.net'
+        }
+      ]
     }
 
   }
+}
 
-
-
-};
 
