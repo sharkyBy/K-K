@@ -11,3 +11,15 @@ $color-aboutUsText: rgb(42,42,42);
 $border-arrow:3px solid rgba(255, 255, 255, 0.7);
 $bgd-aboutUs:rgb(255,255,255);
 $bgd-project:rgb(255,255,255);
+$colorLink-project: rgb(47,128,237);
+
+//project
+  //Переменные для позиционирования блока горизонтальной прокрутки
+    //Card
+    
+    $cardMaxWidth:524px;
+    $cardWidth: 100%;
+    $cardHeight: 747px;
+    $scrollBarHeight: 1px;
+    $cardWidthContainer:1200px;
+    $cardHeightContainer:1080px;

@@ -273,10 +273,10 @@ html {
 .aboutUs__text {
   position: sticky;
   top: 178px;
-  bottom: 400px;
   width: 60%;
   height: 67%;
   margin-top: 178px;
+  margin-bottom: 14.5%;
   color: #2a2a2a;
   border: 1px dashed blue;
 }
@@ -296,6 +296,7 @@ html {
   top: 0;
   width: 30%;
   height: 100%;
+  margin-bottom: 14.5%;
   z-index: 5;
   border: 1px solid red;
 }
@@ -325,31 +326,76 @@ html {
 }
 
 .project {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: 1080px;
+  overflow: hidden;
   border: 3px solid blue;
-  overflow-x: scroll;
 }
 .project__cards {
+  position: absolute;
+  left: -747px;
+  top: 166.5px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 747px;
   width: 100%;
-  border: 3px solid green;
+  height: 1200px;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.project__cards::-webkit-scrollbar, .project__cards::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
 }
 .project__card {
   display: block;
-  width: 500px;
+  transform: rotate(90deg);
+  transform-origin: center center;
+  max-width: 524px;
+  width: 100%;
+  height: 747px;
+  margin: -80px auto;
   border: 1px solid #D0D0D0;
   box-shadow: 0px 0px 10px 5px rgba(108, 99, 255, 0.1);
   border-radius: 8px;
 }
 .project__card img {
   display: block;
+  max-width: 524px;
   width: 100%;
+  height: auto;
+}
+.project__card figcaption {
+  margin: 11px 43px 0px;
+  width: calc(100% - 43px*2);
+  height: 13.3rem;
+}
+.project__card figcaption h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.project__card figcaption p {
+  font-size: 24px;
+}
+.project__card a {
+  display: inline-block;
+  font-family: OpenSans_Regular;
+  color: #2f80ed;
+  font-size: 24px;
+  margin: 16px 43px;
+  border: 1px solid red;
+  text-decoration: none;
+}
+
+.contact {
+  width: 100%;
+  height: 1080px;
 }
 
 /*# sourceMappingURL=index.css.map */

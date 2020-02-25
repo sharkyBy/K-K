@@ -110,3 +110,25 @@ export const staticData = {
 }
 
 
+window.addEventListener('scroll', function () {
+  this.pageYOffset == 900 ? console.log(`posY=${this.pageYOffset}`) : console.log(`Top = ${this.pageYOffset}`);
+  //  pos();
+  position()
+});
+/*  function pos() {
+   let elem = document.querySelector('#carousel');
+   let block = document.querySelector('#aboutUs')
+   console.log(elem, block);
+ } */
+
+function position() {
+  let centerX = document.documentElement.clientWidth / 2;
+  let centerY = document.documentElement.clientHeight / 2;
+  let aboutUs = document.querySelector('#aboutUs');
+  console.log(aboutUs.clientHeight)
+  let elem = document.elementFromPoint(centerX, centerY);
+  console.log(`element: ${elem.tagName}, centerX: ${centerX}, centerY: ${centerY}`);
+  return elem ? elem.style.background = "yellow":elem.style.background='transparent';
+  
+}
+

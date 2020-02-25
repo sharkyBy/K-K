@@ -11,7 +11,7 @@ export default function Main(props) {
     <div className='container'>
       <AboutUs aboutUs={props.data.aboutUs}/>
       <Project project={props.data.project}/>
-       
+       <div className='contact'>contacts</div>
     </div>
   </div>
   )

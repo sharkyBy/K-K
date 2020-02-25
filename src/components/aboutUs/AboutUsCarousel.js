@@ -10,12 +10,13 @@ export default function AboutUsCarousel(props) {
                   imgSrc={item} 
                   key ={`img_${index}`} 
                   alt={`img_${index}`}
+                  id={`pict_${index}`}
+                  coords={props.coords}
                  
-                  
                   />
                   )
   return(
-    <ul>
+    <ul id='carousel'>
       {carousel}
     </ul>
 
