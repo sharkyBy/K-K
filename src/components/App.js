@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import Header from './header/Header';
-import Main from './Main';
 
-
+import Mainpage from './Mainpage';
+import Community from './Community';
+import Navigation from './header/Navigation';
 
 function App(props) {
   // debugger;
-  
-
   return (
     <Fragment>
-      <Header data={props.staticData.header} />
-      <Main data={props.staticData.main} />
+      <Navigation data={props.staticData.header.navigation} />
+      <Mainpage {...props.staticData} />
+      <Community />
     </Fragment>
 
   );

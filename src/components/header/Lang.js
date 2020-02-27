@@ -12,7 +12,7 @@ export default function Lang(props) {
     )
   )
   return (
-    <div className="header__lang">    
+    <div className="navigation__lang">    
       {langName}
     </div>
   )

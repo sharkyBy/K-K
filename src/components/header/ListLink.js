@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from './Link';
-// import ListLink from './ListLink';
+
 
 export const ListLink = (props) => {
   const listItem = props.linkNames.map((item) => (
@@ -13,7 +13,7 @@ export const ListLink = (props) => {
   ))
 
   return (
-    <ul className="header__link">
+    <ul className="navigation__link">
       {listItem}
     </ul>
   )

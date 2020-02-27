@@ -9,8 +9,7 @@ export default function Header(props) {
   return (
 
     <header className="header">
-      <div className='header__container' >
-        <Navigation data={props.data.navigation} />
+      <div className='header__container' >        
         <HeaderContent data={props.data.content} />
       </div>
 

@@ -22,14 +22,14 @@ export default class Nav extends React.Component {
   }
 
   state = {
-    activeLink: this.props.linkNames[0],
+    activeLink: this.props.linkNames,
   };
 
   componentDidMount() {
-    console.log(this.props, this.navRef);
+    // console.log(this.props, this.navRef);
   }
 
-  handleLinkClick(linkName) {
+  handleLinkClick = (linkName)=>{
     this.setState({
       activeLink: linkName,
     });
@@ -38,11 +38,11 @@ export default class Nav extends React.Component {
   render() {
 
     return (
-      <nav className="header__nav" ref={this.navRef}>
+      <nav className="navigation__nav" ref={this.navRef}>
         <ListLink
           linkNames={this.props.linkNames}
           activeLink={this.state.activeLink}
-          handleLinkClick={(item) => this.handleLinkClick(item)}
+          handleLinkClick={this.handleLinkClick}
         />
       </nav>
     )

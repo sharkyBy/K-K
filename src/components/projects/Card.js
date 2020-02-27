@@ -10,7 +10,7 @@ export default function Card(props) {
         <p>{props.cards.p}</p>
       </figcaption>
 
-      <a href={`www.${props.cards.link}`}>{props.cards.link}</a>
+      <a href={`http://www.${props.cards.link}`} target ='_blank' > {props.cards.link}</a>
     </figure>
   )
 }

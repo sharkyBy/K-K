@@ -9,12 +9,11 @@ import AboutUsCarousel from '../aboutUs/AboutUsCarousel';
 export default function AboutUs(props) {
   // debugger;
   // let coords = (e) => console.log(e.target.getBoundingClientRect());
-  window.addEventListener('scroll', function() {
+ /*  window.addEventListener('scroll', function() {
     this.pageYOffset ==900? console.log(`posY=${this.pageYOffset}`):console.log(`Top = ${this.pageYOffset}`);
     //  pos();
     
-  });
-  
+  });   */
 
   
   return (
