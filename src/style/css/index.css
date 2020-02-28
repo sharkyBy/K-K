@@ -74,16 +74,6 @@ html {
   margin-right: 38px;
   z-index: 1;
 }
-.navigation__link li::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  z-index: 1;
-}
 .navigation__link li a {
   display: block;
   width: 100%;
@@ -95,6 +85,16 @@ html {
 }
 .navigation__link li a::first-letter {
   text-transform: uppercase;
+}
+.navigation__link li a::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 1;
 }
 .navigation .btn {
   width: 200px;
@@ -141,6 +141,9 @@ html {
 .navigation__lang #ru .active {
   color: rgba(255, 255, 255, 0.95);
   font-family: OpenSans_Bold;
+}
+.navigation .activeLink::before {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .header {
@@ -209,10 +212,6 @@ html {
   text-align: center;
   letter-spacing: 0.01em;
   transition: color 0.3s ease;
-}
-
-.activeLink::before {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .arrow {

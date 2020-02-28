@@ -95,17 +95,6 @@ html {
       z-index: 1;
 
 
-      &::before {
-        display: block;
-        position: absolute;
-        content: '';
-        top: -10px;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        z-index: 1;
-      }
-
       // &::after {
       //   display: block;
       //   position: absolute;
@@ -135,6 +124,17 @@ html {
 
         &::first-letter {
           text-transform: uppercase;
+        }
+
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          z-index: 1;
         }
       }
 
@@ -195,8 +195,6 @@ html {
         margin-right: 13px;
       }
 
-
-
       .active {
         color: $color-langActive;
         font-family: OpenSans_Bold;
@@ -205,6 +203,11 @@ html {
     }
 
   }
+
+  .activeLink::before {
+    background: $bgd-linkActive;
+  }
+  
 }
 
 
@@ -301,12 +304,6 @@ html {
   }
 
 }
-
-.activeLink::before {
-  background: $bgd-linkActive;
-}
-
-
 
 .arrow {
   position: relative;

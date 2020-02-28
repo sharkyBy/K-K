@@ -1,5 +1,5 @@
 import React from 'react';
-import ListLink from './ListLink';
+import {ListLink} from './ListLink';
 
 
 /* export default function Nav(props) {
@@ -14,6 +14,8 @@ import ListLink from './ListLink';
   )
 } */
 
+//Option 1
+/* 
 export default class Nav extends React.Component {
  
   constructor(props) {
@@ -22,11 +24,12 @@ export default class Nav extends React.Component {
   }
 
   state = {
-    activeLink: this.props.linkNames,
+     activeLink: this.props.linkNames[0],
+   
   };
 
   componentDidMount() {
-    // console.log(this.props, this.navRef);
+    console.log(this.props, this.navRef);
   }
 
   handleLinkClick = (linkName)=>{
@@ -48,4 +51,14 @@ export default class Nav extends React.Component {
     )
   }
 }
+ */
 
+//Option 2 start home page (not a link marker)
+
+export default function Nav(props) {
+  return(
+    <nav className="navigation__nav">
+    <ListLink linkNames={props.linkNames}  />
+  </nav>
+  )
+}

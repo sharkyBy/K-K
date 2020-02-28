@@ -1,10 +1,30 @@
 import React from 'react';
-import Link from './Link';
+import LinkItem from './LinkItem';
 
 
-export const ListLink = (props) => {
+
+// option 1
+
+export  const ListLink = (props) => {
   const listItem = props.linkNames.map((item) => (
-    <Link
+    <LinkItem
+      linkName={item}
+      key={item}     
+    />
+  ))
+
+  return (
+    <ul className="navigation__link">    
+      {listItem}
+    </ul>
+  )
+}
+
+//option 2 start home page (not a link marker)
+
+/* export  const ListLink = (props) => {
+  const listItem = props.linkNames.map((item) => (
+    <LinkItem
       linkName={item}
       key={item}
       isActive={props.activeLink === item}
@@ -13,10 +33,10 @@ export const ListLink = (props) => {
   ))
 
   return (
-    <ul className="navigation__link">
+    <ul className="navigation__link">    
       {listItem}
     </ul>
   )
-}
+} */
 
 export default ListLink;
