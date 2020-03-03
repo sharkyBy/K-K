@@ -1,39 +1,50 @@
 import React from 'react';
 import AboutUsCarousel from '../aboutUs/AboutUsCarousel';
+import AboutUsText from './AboutUsText';
 
  
 
 
 
 
-export default function AboutUs(props) {
+class  AboutUs extends React.Component {
   // debugger;
-  // let coords = (e) => console.log(e.target.getBoundingClientRect());
- /*  window.addEventListener('scroll', function() {
-    this.pageYOffset ==900? console.log(`posY=${this.pageYOffset}`):console.log(`Top = ${this.pageYOffset}`);
-    //  pos();
+  state={
+    zIndex:'1',
+    border:'2px solid red'
+  }
+  coords = (e) => {
+    let Y = e.target.getBoundingClientRect().top
+    let winY = window.scrollY;
     
-  });   */
+    
+    console.log(`client Y:${Y}; scroll Y:${winY}`)
+  }
 
+  handleScroll=() => {
+    this.setState({
+      zIndex:'1',
+    border:'2px solid red'
+    })    
+  }
   
-  return (
-    <div className='aboutUs' id ='aboutUs' /*{onClick={coords}}*/>    
-        <div className='aboutUs__text'>        
-          <h1>{props.aboutUs.text.title}</h1>
-          <p>
-            {props.aboutUs.text.p1}                    
-          </p>
-        </div> 
 
-      {/* <div className='container__aboutUs-scopes'>
-        scopes
-        </div> */}
+
+  render() {
+   
+    return (
+    <div className='aboutUs' id ='aboutUs' >    
+        <AboutUsText text={this.props.text} state={this.state} />
 
       <div className='aboutUs__carousel'>
-        <AboutUsCarousel imgSrc={props.aboutUs.carousel.imgSrc} />
+        <AboutUsCarousel imgSrc={this.props.carousel.imgSrc} coords={this.coords}/>
       </div>
 
 
     </div>
   )
+  }
+  
 }
+
+export default AboutUs;

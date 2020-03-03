@@ -10,6 +10,7 @@ $color-aboutUsTitle:rgb(30,30,30);
 $color-aboutUsText: rgb(42,42,42);
 $border-arrow:3px solid rgba(255, 255, 255, 0.7);
 $bgd-aboutUs:rgb(255,255,255);
+$color-aboutUsBtn:rgb(47, 128, 237);
 $bgd-project:rgb(255,255,255);
 $colorLink-project: rgb(47,128,237);
 
@@ -17,9 +18,9 @@ $colorLink-project: rgb(47,128,237);
   //Переменные для позиционирования блока горизонтальной прокрутки
     //Card
     
-    $cardMaxWidth:524px;
+    $cardMaxWidth:424px;
     $cardWidth: 100%;
-    $cardHeight: 747px;
+    $cardHeight: 650px;
     $scrollBarHeight: 1px;
     $cardWidthContainer:1200px;
-    $cardHeightContainer:1080px;
+    $cardHeightContainer:880px;

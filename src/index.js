@@ -7,9 +7,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 
-ReactDOM.render(
+
+
+ReactDOM.render( 
   <BrowserRouter>
-    <App  staticData = {store.staticData} />
+    <App  {...store} />
   </BrowserRouter> , 
   document.getElementById('root'));
 

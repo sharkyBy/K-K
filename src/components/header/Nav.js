@@ -15,50 +15,51 @@ import {ListLink} from './ListLink';
 } */
 
 //Option 1
-/* 
+
+
+
 export default class Nav extends React.Component {
  
-  constructor(props) {
-    super(props);
-    this.navRef = React.createRef();
-  }
-
-  state = {
-     activeLink: this.props.linkNames[0],
-   
+  state = { 
+     activePage: this.props.page[0],       
   };
 
   componentDidMount() {
-    console.log(this.props, this.navRef);
+    // console.log(this.props, this.navRef);
   }
 
   handleLinkClick = (linkName)=>{
     this.setState({
-      activeLink: linkName,
+      activePage: linkName,
     });
-  } 
+  }
+  
+ 
   
   render() {
-
+    // debugger;
     return (
-      <nav className="navigation__nav" ref={this.navRef}>
+     
+      <nav className="navigation__nav" >
         <ListLink
-          linkNames={this.props.linkNames}
-          activeLink={this.state.activeLink}
+        {...this.props}
+        //  linkNames={this.props.page}
+          activePage={this.state.activePage}
           handleLinkClick={this.handleLinkClick}
+         
         />
       </nav>
     )
   }
 }
- */
+ 
 
 //Option 2 start home page (not a link marker)
 
-export default function Nav(props) {
+/* export default function Nav(props) {
   return(
     <nav className="navigation__nav">
-    <ListLink linkNames={props.linkNames}  />
+    <ListLink {...props}  />
   </nav>
   )
-}
+} */
