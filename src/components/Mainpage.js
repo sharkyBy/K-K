@@ -8,7 +8,9 @@ export default function Mainpage(props) {
   return (
     <Fragment>
       <Header data={props.header} />
-      <Main data={props.main} />
+      <Main data={props.main}
+     
+       />
     </Fragment>
 
   )

@@ -9,9 +9,9 @@ export default function Main(props) {
   return (
   <div className='main' >
     <div className='container'>
-      <AboutUs {...props.data.aboutUs}/>
-      <Project {...props.data.project}/>
-      <Contact {...props.data.contact}/>
+      <AboutUs {...props.data.aboutUs} />
+      <Project {...props.data.project} />
+      <Contact {...props.data.contact} />
     </div>
   </div>
   )

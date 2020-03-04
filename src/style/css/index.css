@@ -266,22 +266,6 @@ html {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* &-scopes {
-      position: sticky;
-      top: 0px;
-      margin-top: 43px;
-      height: 750px;
-      font-size: 200px;
-      line-height: 0.5;
-      font-family: OpenSans_ExtraBold;
-      writing-mode: vertical-rl;
-      transform: rotate(-180deg);
-      color: #6C63FF;
-      opacity: 0.5;
-      text-transform: uppercase;
-      z-index: 1;
-
-    } */
 }
 .aboutUs__text {
   position: sticky;
@@ -290,28 +274,25 @@ html {
   height: 67%;
   margin-top: 178px;
   margin-bottom: 14.5%;
+}
+.aboutUs__text_wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
   color: #2a2a2a;
   border: 1px dashed blue;
   overflow: hidden;
 }
 .aboutUs__text .visible {
-  position: relative;
-  background: white;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.aboutUs__text .hidden {
   position: absolute;
   background: white;
   top: 0px;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 5px solid red;
-  z-index: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
 }
 .aboutUs__text h1 {
   padding: 55px 0px 10px 36px;
@@ -344,13 +325,13 @@ html {
   top: 0;
   width: 30%;
   height: 100%;
-  margin-bottom: 14.5%;
+  margin-bottom: 25.5%;
   z-index: 5;
   border: 1px solid red;
 }
 .aboutUs__carousel ul {
   display: flex;
-  margin-top: 65%;
+  margin-top: 75%;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
