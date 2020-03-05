@@ -7,12 +7,12 @@ import Contact from './contact/Contact';
 export default function Main(props) {
   // debugger;
   return (
-  <div className='main' >
+  <main className='main' >
     <div className='container'>
       <AboutUs {...props.data.aboutUs} />
       <Project {...props.data.project} />
       <Contact {...props.data.contact} />
     </div>
-  </div>
+  </main>
   )
 }

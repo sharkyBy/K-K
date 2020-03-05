@@ -5,6 +5,7 @@ import Main from './Main';
 
 export default function Mainpage(props) {
   // debugger;
+ 
   return (
     <Fragment>
       <Header data={props.header} />

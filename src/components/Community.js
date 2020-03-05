@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function Community(props) {
+export default function Community(props) { 
+  
   return(
     <div className='example'>
       <div className='example__wrapper'> some tex. And some text.
