@@ -21,11 +21,12 @@ import { NavLink } from 'react-router-dom';
 
 export default function LinkIten(props) {
   //  debugger;
+ 
   return (
    
     <li>
     <NavLink 
-    to={`/${props.linkName}`} 
+    to={`/${props.linkName}`} //TODO* Можно попробовать первую ссылку заенить на '/', чтобы убрать Redirect in Route
     className={props.isActive ? 'activeLink' : null} 
     onClick={props.onClick}
     >

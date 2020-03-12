@@ -20,19 +20,20 @@ import {ListLink} from './ListLink';
 
 export default class Nav extends React.Component {
  
-  state = { 
-     activePage: this.props.page[0],       
-  };
+  // state = { 
+  //    activePage: document.documentURI,    
+
+  // };
 
   componentDidMount() {
     // console.log(this.props, this.navRef);
   }
 
-  handleLinkClick = (linkName)=>{
-    this.setState({
-      activePage: linkName,
-    });
-  }
+  // handleLinkClick = (linkName)=>{
+  //   this.setState({
+  //     activePage: linkName,
+  //   });
+  // }
   
  
   
@@ -44,8 +45,8 @@ export default class Nav extends React.Component {
         <ListLink
         {...this.props}
         //  linkNames={this.props.page}
-          activePage={this.state.activePage}
-          handleLinkClick={this.handleLinkClick}
+          // activePage={this.state.activePage}
+          // handleLinkClick={this.handleLinkClick}
          
         />
       </nav>

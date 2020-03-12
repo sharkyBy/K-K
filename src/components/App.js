@@ -15,8 +15,9 @@ let userLang = (window.navigator.language ||
 document.addEventListener('scroll', ()=>{validUrl(aboutUsScroll,removeEvent)}, 
 false);
 
+//Убираю функцию на странице "community"
 function validUrl(func1,func2) {
-  document.documentURI.includes('/community') ? func2(): func1();
+  document.documentURI.includes('community') ? func2(): func1();
   
 }
 
@@ -25,6 +26,7 @@ function removeEvent() {
   console.log('функция получения координат по событию scroll удалена!')
 }
 // Функция на событие скролл 
+
 function aboutUsScroll() {
   let textWrap = document.documentElement.querySelector('.aboutUs__text_wrapper');
   let textWrapper = [...textWrap.children];
@@ -64,37 +66,52 @@ function aboutUsScroll() {
 
 
 class App extends React.Component {
+
+  
   state = {
     lang: userLang,
+    activePage:this.props.staticData.header.navigation.page[0],  
+     
+  }
+
+
+
+  handleLinkClick = (linkName)=>{
+    this.setState({
+      activePage: linkName,
+    });
   }
 
   handlerUserLang = (userL) => {
     this.setState({
       lang: userL,
-    })
+    })    
   }
 
+  
   render() {
+    let redirect = this.state.lang.includes('ru') ?'staticData_ru':'staticData';
+    console.log(this.state);
     // debugger;
-
-    if (this.state.lang.includes('ru')) {
+    let activePage = this.props.staticData.header.navigation.page[0]; 
+    
       return (
         <Switch>
           <Route>
             <Navigation
-              {...this.props.staticData_ru.header.navigation}
+              {...this.props[redirect].header.navigation}
               handlerUserLang={this.handlerUserLang}
               language={this.state.lang}
+              activePage={this.state.activePage}
+          handleLinkClick={this.handleLinkClick}
 
             />
             <Route exact path='/' >
-              <Mainpage {...this.props.staticData_ru}
-              />
+              <Redirect to = '/mainpage' />             
             </Route>
 
             <Route exact path='/mainpage'>
-              <Mainpage {...this.props.staticData_ru}
-              />
+              <Mainpage {...this.props[redirect]} />
             </Route>
 
             <Route exact path='/community'>
@@ -104,34 +121,36 @@ class App extends React.Component {
 
         </Switch>
       )
-    } else {
-      return (
-        <Switch>
-          <Route>
-            <Navigation
-              {...this.props.staticData.header.navigation}
-              handlerUserLang={this.handlerUserLang}
-              language={this.state.lang}
-            />
-            <Route exact path='/' >
-              <Redirect to='/mainpage' />
-            </Route>
-
-            <Route exact path='/mainpage'>
-              <Mainpage {...this.props.staticData} />
-            </Route>
-
-            <Route exact path='/community'>
-              <Community />
-            </Route>
-          </Route>
-
-        </Switch>
-      )
-    }
-
   }
 }
+    // } else {
+    //   return (
+    //     <Switch>
+    //       <Route>
+    //         <Navigation
+    //           {...this.props.staticData.header.navigation}
+    //           handlerUserLang={this.handlerUserLang}
+    //           language={this.state.lang}
+    //         />
+    //         <Route exact path='/' >
+    //           <Redirect to='/mainpage' />
+    //         </Route>
+
+    //         <Route exact path='/mainpage'>
+    //           <Mainpage {...this.props.staticData} />
+    //         </Route>
+
+    //         <Route exact path='/community'>
+    //           <Community />
+    //         </Route>
+    //       </Route>
+
+    //     </Switch>
+    //   )
+    // }
+
+  // }
+
 
 
 
