@@ -30,7 +30,7 @@ export  const ListLink = (props) => {
       linkName={item}
       key={item}
       pageName={props.pageName[index]}
-      isActive={props.activePage === item}
+      isActive={props.activePage.includes(item)?props.activePage:null}
       onClick={() => props.handleLinkClick(item)}
     />
   ))

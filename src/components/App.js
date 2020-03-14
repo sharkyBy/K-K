@@ -7,56 +7,54 @@ import { Route, Switch, Redirect } from 'react-router';
 
 // Получение языка браузера
 let userLang = (window.navigator.language ||
-  window.navigator.systemLanguage ||
-  window.navigator.userLanguage);
+    window.navigator.systemLanguage ||
+    window.navigator.userLanguage);
 // console.log(document.documentURI)
 
 // Обработка события "scroll" для блока about Us 
-document.addEventListener('scroll', ()=>{validUrl(aboutUsScroll,removeEvent)}, 
-false);
+document.addEventListener('scroll', () => { validUrl(aboutUsScroll, removeEvent) },
+    false);
 
 //Убираю функцию на странице "community"
-function validUrl(func1,func2) {
-  document.documentURI.includes('community') ? func2(): func1();
-  
+function validUrl(func1, func2) {
+    document.documentURI.includes('community') ? func2() : func1();
+
 }
 
 function removeEvent() {
-  document.removeEventListener('scroll',aboutUsScroll);
-  console.log('функция получения координат по событию scroll удалена!')
+    document.removeEventListener('scroll', aboutUsScroll);
+    console.log('функция получения координат по событию scroll удалена!')
 }
 // Функция на событие скролл 
 
 function aboutUsScroll() {
-  let textWrap = document.documentElement.querySelector('.aboutUs__text_wrapper');
-  let textWrapper = [...textWrap.children];
-  let carouselWrapper = [...document.documentElement.querySelector('#carousel').children];
+    let textWrap = document.documentElement.querySelector('.aboutUs__text_wrapper');
+    let textWrapper = [...textWrap.children];
+    let carouselWrapper = [...document.documentElement.querySelector('#carousel').children];
 
-  let top = carouselWrapper.map((item) => {
-    let y = item.getBoundingClientRect().y;
-    let height = item.getBoundingClientRect().height;
+    let top = carouselWrapper.map((item) => {
+        let y = item.getBoundingClientRect().y;
+        let height = item.getBoundingClientRect().height;
 
-    return y + height / 2;
-  }
-  );
+        return y + height / 2;
+    });
 
 
-  let y = textWrap.getBoundingClientRect().y;
-  let h = textWrap.getBoundingClientRect().height;
-  let textCenter = Math.round(y + h / 2);
+    let y = textWrap.getBoundingClientRect().y;
+    let h = textWrap.getBoundingClientRect().height;
+    let textCenter = Math.round(y + h / 2);
 
-  // el.scrollIntoView({block:"center",behavior: "smooth"}) 
-  console.log(`pictCenter: ${top}; textCenter: ${textCenter}; y: ${y}`)
+    // el.scrollIntoView({block:"center",behavior: "smooth"}) 
+    console.log(`pictCenter: ${top}; textCenter: ${textCenter}; y: ${y}`)
 
-  return (
-    top.map((item, index) => {
-      return (
-        Math.round(item) <= textCenter && Math.round(item) >= Math.round(y) ? textWrapper[index].style.opacity = '1' :
-          Math.round(item) <= h && Math.round(item) >= (textCenter + 0.9 * Math.round(h)) ? textWrapper[index].style.opacity = '1' : textWrapper[index].style.opacity = '0'
-      )
-    }
+    return (
+        top.map((item, index) => {
+            return (
+                Math.round(item) <= textCenter && Math.round(item) >= Math.round(y) ? textWrapper[index].style.opacity = '1' :
+                Math.round(item) <= h && Math.round(item) >= (textCenter + 0.9 * Math.round(h)) ? textWrapper[index].style.opacity = '1' : textWrapper[index].style.opacity = '0'
+            )
+        })
     )
-  )
 
 
 }
@@ -66,61 +64,56 @@ function aboutUsScroll() {
 
 
 class App extends React.Component {
-
-  
   state = {
     lang: userLang,
-    activePage:this.props.staticData.header.navigation.page[0],  
-     
-  }
+    activePage:
+      window.location.pathname === "/" ? "/mainpage" : window.location.pathname
+  };
 
-
-
-  handleLinkClick = (linkName)=>{
+  handleLinkClick = linkName => {
     this.setState({
-      activePage: linkName,
+      activePage: linkName
     });
-  }
+  };
 
-  handlerUserLang = (userL) => {
+  handlerUserLang = userL => {
     this.setState({
-      lang: userL,
-    })    
-  }
+      lang: userL
+    });
+  };
 
-  
   render() {
-    let redirect = this.state.lang.includes('ru') ?'staticData_ru':'staticData';
+    let redirect = this.state.lang.includes("ru")
+      ? "staticData_ru"
+      : "staticData";
     console.log(this.state);
     // debugger;
-    let activePage = this.props.staticData.header.navigation.page[0]; 
-    
-      return (
-        <Switch>
-          <Route>
-            <Navigation
-              {...this.props[redirect].header.navigation}
-              handlerUserLang={this.handlerUserLang}
-              language={this.state.lang}
-              activePage={this.state.activePage}
-          handleLinkClick={this.handleLinkClick}
+    // let activePage = this.props.staticData.header.navigation.page[0];
 
-            />
-            <Route exact path='/' >
-              <Redirect to = '/mainpage' />             
-            </Route>
-
-            <Route exact path='/mainpage'>
-              <Mainpage {...this.props[redirect]} />
-            </Route>
-
-            <Route exact path='/community'>
-              <Community />
-            </Route>
+    return (
+      <Switch>
+        <Route>
+          <Navigation
+            {...this.props[redirect].header.navigation}
+            handlerUserLang={this.handlerUserLang}
+            language={this.state.lang}
+            activePage={this.state.activePage}
+            handleLinkClick={this.handleLinkClick}
+          />
+          <Route exact path="/">
+            <Redirect to="/mainpage" />
           </Route>
 
-        </Switch>
-      )
+          <Route exact path="/mainpage">
+            <Mainpage {...this.props[redirect]} />
+          </Route>
+
+          <Route exact path="/community">
+            <Community />
+          </Route>
+        </Route>
+      </Switch>
+    );
   }
 }
     // } else {
@@ -136,20 +129,20 @@ class App extends React.Component {
     //           <Redirect to='/mainpage' />
     //         </Route>
 
-    //         <Route exact path='/mainpage'>
-    //           <Mainpage {...this.props.staticData} />
-    //         </Route>
+//         <Route exact path='/mainpage'>
+//           <Mainpage {...this.props.staticData} />
+//         </Route>
 
-    //         <Route exact path='/community'>
-    //           <Community />
-    //         </Route>
-    //       </Route>
+//         <Route exact path='/community'>
+//           <Community />
+//         </Route>
+//       </Route>
 
-    //     </Switch>
-    //   )
-    // }
+//     </Switch>
+//   )
+// }
 
-  // }
+// }
 
 
 
@@ -188,5 +181,3 @@ class App extends React.Component {
 
 
 export default App;
-
-
