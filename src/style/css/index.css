@@ -254,6 +254,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -375,8 +376,14 @@ html {
   display: block;
   max-width: 350px;
   width: 100%;
+<<<<<<< HEAD
   margin: 20px;
   border: 1px solid #D0D0D0;
+=======
+  height: 650px;
+  margin: -80px auto;
+  border: 1px solid #d0d0d0;
+>>>>>>> b04e87b2d7f3d1e0b861ba003411be27b5a3ecab
   box-shadow: 0px 0px 10px 5px rgba(108, 99, 255, 0.1);
   border-radius: 8px;
 }
@@ -389,7 +396,7 @@ html {
 .project__card figcaption {
   display: block;
   margin: 11px 43px 0px;
-  width: calc(100% - 43px*2);
+  width: calc(100% - 43px * 2);
   height: 13.3rem;
 }
 .project__card figcaption h1 {
@@ -413,13 +420,32 @@ html {
 }
 
 .contact {
+  position: relative;
+  max-width: 1920px;
   width: 100%;
-  height: 1080px;
-  border: 2px solid red;
+  height: 485px;
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  border: 3px solid green;
 }
 .contact h1 {
+  position: absolute;
+  display: inline;
+  letter-spacing: 0.065em;
+  font-size: 388px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -5%);
   text-transform: uppercase;
   color: #eec6ff;
+  z-index: 1;
+}
+.contact__container {
+  position: relative;
+  width: 1200px;
+  border: 2px solid red;
+  z-index: 2;
 }
 .contact__form {
   width: 53.25%;
