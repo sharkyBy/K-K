@@ -10,8 +10,8 @@ export default function ListCards(props) {
   ))
 
   return (
-    <section className='project__cards'>
+    <div className='project__container'>
        {listcards}
-      </section>
+      </div>
   )
 }

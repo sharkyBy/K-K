@@ -354,6 +354,7 @@ html {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
 }
@@ -492,65 +493,64 @@ html {
 
 
 .project {
-  position: relative;
-  top: 0;
-  bottom: 100px;
-  width: auto;
-  // height: $cardHeightContainer;
+  position: relative;  
+  width:1920px;
+  height: 1500px;
   overflow: hidden;
   border: 3px solid blue;
 
   &__container {
     position: sticky;
-    top: 0;
+    display: flex;
+
+    top: 100px;
     left: 0;
-    width: auto;
-    height: $cardHeightContainer;
+    width: 1200px;
+    height: auto;
     background-color: indianred;
 
   }
 
 
-  &__cards {
-    position: absolute;
-    left: - $cardHeight;
-    top: ($cardHeightContainer - $cardHeight)/2;
+  // &__cards {
+  //   position: absolute;
+  //   left: - $cardHeight;
+  //   top: ($cardHeightContainer - $cardHeight)/2;
 
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    max-width: $cardHeight;
-    width: 100%;
-    height: $cardWidthContainer;
-    transform: rotate(-90deg);
-    transform-origin: right top;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: honeydew;
-    z-index: 3;
+  //   display: flex;
+  //   flex-flow: column nowrap;
+  //   align-items: center;
+  //   max-width: $cardHeight;
+  //   width: 100%;
+  //   height: $cardWidthContainer;
+  //   transform: rotate(-90deg);
+  //   transform-origin: right top;
+  //   overflow-y: auto;
+  //   overflow-x: hidden;
+  //   background: honeydew;
+  //   z-index: 3;
 
 
 
     //скрываем scrollbar в chrome
-    &::-webkit-scrollbar,
-    &::-webkit-scrollbar-button {
-      width: 1px;
-      height: 1px;
-    }
+    // &::-webkit-scrollbar,
+    // &::-webkit-scrollbar-button {
+    //   width: 1px;
+    //   height: 1px;
+    // }
 
     // скрываем scrollbar в firefox
-    scrollbar-width: none;
+    // scrollbar-width: none;
 
-  }
+ 
 
   &__card {
     display: block;
-    transform: rotate(90deg);
-    transform-origin: center center;
-    max-width: $cardMaxWidth;
-    width: 100%;
-    height: $cardHeight;
-    margin: -80px auto;
+    // transform: rotate(90deg);
+    // transform-origin: center center;
+    max-width: 350px;
+    width: 100%;   
+    margin: 20px;
 
     border: 1px solid #D0D0D0;
     box-shadow: 0px 0px 10px 5px rgba(108, 99, 255, 0.1);
@@ -558,9 +558,9 @@ html {
 
     img {
       display: block;
-      max-width: $cardMaxWidth;
+      max-width: 350px;
       width: 100%;
-      // height: auto;
+      height: auto;
 
     }
 
@@ -587,7 +587,8 @@ html {
       }
 
     }
-
+ 
+  }
     a {
       display: inline-block;
       font-family: OpenSans_Regular;
@@ -598,7 +599,6 @@ html {
       text-decoration: none;
     }
 
-  }
 }
 
 //project
