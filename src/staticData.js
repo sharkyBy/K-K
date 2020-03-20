@@ -144,28 +144,28 @@ export const store = {
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/3.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/4.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/5.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/6.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
@@ -174,6 +174,11 @@ export const store = {
         ]
       },
       contact: {
+        formName:'callback form',
+        callMe:'Call me',
+        messageMe:'Message me',
+        buttonName:'contact me',
+        before:'How to contact you?',       
         messenger: [
           {
             name: 'telegram',
@@ -316,28 +321,28 @@ export const store = {
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/3.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/4.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/5.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
             link: 'menivim.net'
           },
           {
-            srcImg: './img/Cards/2.png',
+            srcImg: './img/Cards/6.png',
             title: 'meniwim webapp',
             p: `Development and support of a web application for an Israeli commercial real 
               estate agent`,
@@ -346,6 +351,11 @@ export const store = {
         ]
       },
       contact: {
+        formName:'форма обратной связи',
+        callMe:'Позвонить мне',
+        messageMe:'Написать мне',
+        buttonName:'связаться со мной',
+        before:'Как связаться с тобой?', 
         messenger: [
           {
             name: 'telegram',

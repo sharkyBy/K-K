@@ -1,5 +1,6 @@
 import React from 'react';
-import ContactMessenger from './ContactMessenger';
+// import ContactMessenger from './ContactMessenger';
+import Form from './Form';
 
 export default class Contact extends React.Component {
   state = {
@@ -23,25 +24,23 @@ export default class Contact extends React.Component {
     return (
       <div className="contact">
         <h1>contact</h1>
-        <div className="contact__container">
-          
-          <form className="contact__form">
-            <h2>callback form</h2>
-            <input
-              placeholder="+375 __ ___-__-__"
-              required="required"
-              // pattern="\+{1,1}\d{3}\s{0,}\(([2]{1}([5]{1}|[9]{1}))|([3]{1}[3]{1})|([4]{1}[4]{1}))\s{0,}\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+        <div className="contact__container">          
+          <Form value = {this.state.form}
+            handlePhoneChange={this.handlePhoneChange}
+            handleSubmit={this.handleSubmit}
+            {...this.props}
+          />
 
-              value={this.state.phone}
-              onChange={this.handlePhoneChange}
-            />
-            <div className="contact__messenger">
-              <ContactMessenger {...this.props} />
+          <div className='contact__info'>
+            <div>+375 29 519-80-07</div>
+            <div>contact@kandk.team</div>
+            <div>
+              <img src=''/>
+              <img src=''/>
+              <img src=''/>
             </div>
-            <button className="contact__button" onClick={this.handleSubmit}>
-              Contact me
-            </button>
-          </form>
+
+          </div>
         </div>
       </div>
     );
