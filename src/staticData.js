@@ -178,7 +178,9 @@ export const store = {
         callMe:'Call me',
         messageMe:'Message me',
         buttonName:'contact me',
-        before:'How to contact you?',       
+        before:'How to contact you?',
+        tel:'+375 29 519-80-07',
+        mail:'contact@kandk.team' ,     
         messenger: [
           {
             name: 'telegram',
@@ -200,6 +202,21 @@ export const store = {
             link: 'tel:+375 29 519 80 07',
             src: './img/iconForCall/call.png'
           }
+        ],
+        contactInfoIcon: [
+          {
+            name:'vk',
+            src:'./img/contactInfoIcon/vk.svg'
+          },
+          {
+            name:'instagram',
+            src:'./img/contactInfoIcon/insta.png'
+          },
+          {
+            name:'telegramm',
+            src:'./img/contactInfoIcon/telegramm.svg'
+          },
+
         ]
       },
     },
@@ -351,11 +368,13 @@ export const store = {
         ]
       },
       contact: {
-        formName:'форма обратной связи',
+        formName:'обратная связь',
         callMe:'Позвонить мне',
         messageMe:'Написать мне',
         buttonName:'связаться со мной',
-        before:'Как связаться с тобой?', 
+        before:'Как связаться с тобой?',
+        tel:'+375 29 519-80-07',
+        mail:'contact@kandk.team' ,  
         messenger: [
           {
             name: 'telegram',
@@ -377,6 +396,21 @@ export const store = {
             link: 'tel:+375 29 519 80 07',
             src: './img/iconForCall/call.png'
           }
+        ],
+        contactInfoIcon: [
+          {
+            name:'vk',
+            src:'./img/contactInfoIcon/vk.svg'
+          },
+          {
+            name:'instagram',
+            src:'./img/contactInfoIcon/insta.png'
+          },
+          {
+            name:'telegramm',
+            src:'./img/contactInfoIcon/telegramm.svg'
+          },
+
         ]
       },
 

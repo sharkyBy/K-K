@@ -30,7 +30,7 @@ class App extends React.Component {
     let redirect = this.state.lang.includes("ru")
       ? "staticData_ru"
       : "staticData";
-    console.log(this.state);
+    // console.log(this.state);
     // debugger;
     // let activePage = this.props.staticData.header.navigation.page[0];
 

@@ -48,12 +48,14 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
 }
 
 .navigation {
+ 
   max-width: 1200px;
   width: 100%;
   height: 74px;
@@ -70,10 +72,11 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    // align-items: center;
+    
   }
 
   &__nav {
+    
     flex: 1;
     height: 50%;
     font-family: OpenSans_Light;
@@ -94,24 +97,18 @@ body {
       height: 100%;
       margin-right: 38px;
       z-index: 1;
+      
 
-      // &::after {
-      //   display: block;
-      //   position: absolute;
-      //   content: '';
-      //   top: -11px;
-      //   right: -1px;
-      //   // background: white;
-      //   width: 102%;
-      //   height: 7px;
-      //   z-index: 2;
-      //   transition: 0.4s ease;
-      // }
-
-      // &:hover::after {
-      //   width: 0%;
-      //   transition: 0.4s ease;
-      // }
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 5px;        
+        z-index: 2;
+      }
 
       a {
         display: block;
@@ -121,21 +118,13 @@ body {
         text-decoration: none;
         color: $color-nav;
         font-family: OpenSans_Regular;
+        
 
-        &::first-letter {
+        &::first-letter {          
           text-transform: uppercase;
         }
 
-        &::before {
-          display: block;
-          position: absolute;
-          content: "";
-          top: -10px;
-          left: 0;
-          width: 100%;
-          height: 5px;
-          z-index: 1;
-        }
+        
       }
     }
 
@@ -458,13 +447,14 @@ body {
   position: relative;  
   max-width:1900px;
   width: 100%;  
-  // border: 3px solid blue;
+  border: 3px solid blue;
 
   &__container {
     position: sticky;
     display: flex;    
     overflow-x: auto;
-    top: 100px;    
+    top: 100px;
+    bottom: 100px;    
     min-width: 100%;
     
 
@@ -477,29 +467,9 @@ body {
 
     //скрываем scrollbar в firefox
     // scrollbar-width: none;
-    // background-color: indianred;
+   
   }
 
-
-  // &__cards {
-  //   position: absolute;
-  //   left: - $cardHeight;
-  //   top: ($cardHeightContainer - $cardHeight)/2;
-
-  //   display: flex;
-  //   flex-flow: column nowrap;
-  //   align-items: center;
-  //   max-width: $cardHeight;
-  //   width: 100%;
-  //   height: $cardWidthContainer;
-  //   transform: rotate(-90deg);
-  //   transform-origin: right top;
-  //   overflow-y: auto;
-  //   overflow-x: hidden;
-  //   background: honeydew;
-  //   z-index: 3;
-
-    
 
  
 
@@ -566,35 +536,26 @@ body {
   max-width: 1920px;
   width: 100%;
   height:485px;
-  display: flex;
+  display: flex;  
   justify-content: center;
-  margin-top: 300px;
+  margin: 300px 0;
   // border: 3px solid green;
 
-  
-  h1 {
-    position: absolute;   
-    display: inline;    
-    letter-spacing: 0.065em;
-    font-size: 388px;
-    top: 0%; 
-    left: 50%; 
-    transform: translate(-50%, -5%);
-   
-    
-    text-transform: uppercase;
-    color: rgb(238, 198, 255);
-    z-index: 1;
-  }
+  background-blend-mode: hard-light; //смешивание слоев
+  background: url(/img/contact.png) center, white;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 
   &__container {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 100%;
-    // border: 2px solid red;
-    z-index: 2;
+    // border: 2px solid rgb(0, 174, 255);
+    
   }
 
   &__form {
@@ -696,7 +657,7 @@ body {
     &:hover {
       border: 1px solid  rgba(47, 128, 237, 0.5);
       box-shadow: 0 0 5px 5px  rgba(47, 128, 237, 0.5);
-      color: rgb(44, 139, 44);
+      
     }
     
 
@@ -712,15 +673,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-size: 40px;
     font-family: OpenSans_SemiBold;
+    
+    
     div {
-      width: 100%;      
-      padding-left: 100px;
+      width: 80%;     
       font-family: inherit;
-     
+      
     }
-  }
+
+    &_icon {      
+      img {
+        margin-right: 10px;
+      }  
+    }
 
   // &__messenger {
   //   width: 511px;
@@ -738,6 +706,7 @@ body {
   //     align-items: center;
   //   }
   // }
+  }
 }
 
 .example {
