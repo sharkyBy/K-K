@@ -55,8 +55,9 @@ body {
 }
 
 .navigation {
- 
-  max-width: 1200px;
+
+  max-width: 1240px;
+  padding: 0 20px;
   width: 100%;
   height: 74px;
   background: $bgd-nav;
@@ -70,13 +71,12 @@ body {
 
   &__container {
     width: 100%;
-    height: 100%;
+    height: 100%;    
     display: flex;
-    
+
   }
 
   &__nav {
-    
     flex: 1;
     height: 50%;
     font-family: OpenSans_Light;
@@ -97,7 +97,7 @@ body {
       height: 100%;
       margin-right: 38px;
       z-index: 1;
-      
+
 
       &::before {
         display: block;
@@ -106,7 +106,7 @@ body {
         top: -10px;
         left: 0;
         width: 100%;
-        height: 5px;        
+        height: 5px;
         z-index: 2;
       }
 
@@ -118,13 +118,13 @@ body {
         text-decoration: none;
         color: $color-nav;
         font-family: OpenSans_Regular;
-        
 
-        &::first-letter {          
+
+        &::first-letter {
           text-transform: uppercase;
         }
 
-        
+
       }
     }
 
@@ -136,22 +136,23 @@ body {
   // }
 
   .btn {
-    width: 260px;
+    display: inline-block;
+    padding: 0 20px;
     height: 55px;
     margin-top: 11px;
     border-radius: 8px;
-    border: 4px solid rgba(255, 255, 255, 0.9);
+    border: 2px solid $border-contactButton;
     background: transparent;
     outline-style: none;
-    color: $color-nav;
+    color: $color-contactButton;
     font-family: OpenSans_SemiBold;
     font-size: 24px;
     margin-right: 34px;
     cursor: pointer;
 
     &:hover {
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.7);
     }
 
     &::first-letter {
@@ -202,14 +203,14 @@ body {
   }
 }
 
+//navigation
+
 .header {
   position: relative;
   display: flex;
   justify-content: center;
-  // max-width: 1920px;
   width: 100%;
   height: 100%;
-  font-size: 24px;
 
   background-blend-mode: soft-light; //смешивание слоев
   background: url(/img/background-image.png), $bgd-container;
@@ -218,7 +219,8 @@ body {
   // border: 1px solid red;
 
   &__container {
-    max-width: 1200px;
+    max-width: 1240px;
+    padding: 0 20px;
     width: 100%;
     height: auto;
     // border: 2px solid red;
@@ -249,7 +251,8 @@ body {
       justify-content: center;
       align-items: center;
       margin-top: 10vmin;
-      width: 19.1%;
+      max-width: 19.1%;
+      width: 100%;
       // height: 63px;
 
       a {
@@ -287,33 +290,47 @@ body {
       }
     }
   }
-}
+} //header
 
 .arrow {
-  position: relative;
-  width: 93px;
-  height: 46px;
+  
+  width: $arrowWidth;
+  height: $arrowWidth * 0.5;
   background-color: transparent;
   margin-top: 10vmin;
   margin-bottom: 100px;
-  overflow: hidden;
-
-  div {
-    position: absolute;
-    top: -75px;
-    left: -5px;
-    width: 100px;
-    height: 100px;
-    border: $border-arrow;
-    transform: rotate(45deg);
-    transform-origin: 50% 50%;
-  }
+  
+  // border: 1px solid red;
 
   a {
+    position: relative;
     text-decoration: none;
     display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // border: 1px solid yellow;
+    div {
+      position: absolute;
+      bottom: 0.2*$arrowWidth;
+      left: 0%;
+      width: $arrowWidth;
+      height: $arrowWidth;
+      border: 3px solid $border-arrow;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+      
+
+      &:hover {
+        border: 3px solid white;
+        transition: all 0.2s ease;
+      }
+    }
+
+
+    
   }
-}
+}//arrow
 
 // MAIN
 
@@ -328,7 +345,8 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
+  padding: 0 20px;
   width: 100%;
   height: auto;
   // border: 2px solid red;
@@ -354,8 +372,8 @@ body {
       position: relative;
       width: 100%;
       height: 500px;
-      color: $color-aboutUsText;
-      // border: 1px dashed blue;
+      color: $color-aboutUsText;      
+      border: 1px dashed blue;
       overflow: hidden;
     }
 
@@ -376,24 +394,24 @@ body {
       font-family: OpenSans_Bold;
       text-transform: uppercase;
       color: $color-aboutUsTitle;
+      
     }
 
     p {
-      padding: 0px 36px 55px;
+      padding: 0px 36px 55px;      
       overflow-wrap: break-word;
       white-space: pre-line;
     }
-  }
+  }//text
 
   &__btn {
-    // width: auto;
-    display: inline-flex;
-    align-items: center;
+    
+    display: inline-block;    
     height: 60px;
     margin: 0 0 50px 36px;
     border: 4px solid$color-aboutUsBtn;
     border-radius: 8px;
-    padding: 0 20px;
+    padding: 8px 20px;
     font-size: 24px;
     font-family: OpenSans_SemiBold;
     color: $color-aboutUsBtn;
@@ -445,98 +463,92 @@ body {
 
 .project {
   position: relative;  
-  max-width:1900px;
-  width: 100%;  
-  border: 3px solid blue;
+  width: 100%;
+  // border: 3px solid blue;
 
   &__container {
     position: sticky;
-    display: flex;    
+    display: flex;
     overflow-x: auto;
-    top: 100px;
-    bottom: 100px;    
+    top: 150px;    
     min-width: 100%;
-    
+
 
     //скрываем scrollbar в chrome
-    // &::-webkit-scrollbar,
-    // &::-webkit-scrollbar-button {
-    //   width: 10px;
-    //   height: 10px;
-    // }
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-button {
+      width: 1px;
+      height: 1px;
+    }
 
     //скрываем scrollbar в firefox
     // scrollbar-width: none;
-   
+
   }
 
 
- 
+
 
   &__card {
     display: block;
     // transform: rotate(90deg);
     // transform-origin: center center;
-    min-width: 350px;    
-    width: 100%; 
-    height: 600px;  
+    min-width: $card-minWidth;
+    width: 100%;
+    height: 1.7 * $card-minWidth;
     margin: 20px;
-
+    font-size: 10px;
     border: 1px solid #d0d0d0;
     box-shadow: 0px 0px 10px 5px rgba(108, 99, 255, 0.1);
     border-radius: 8px;
 
     img {
-      display: block;      
-      width: 350px;
-      height:45%;
+      display: block;
+      width: 100%;
+      height: 45%;
       // border: 2px solid red;
 
     }
 
     figcaption {
-      display: block;      
+      display: block;
       width: 100%;
-      height:40%;
-      // border: 1px solid green;
+      height: 40%;  
       padding: 20px;
 
       h1 {
-        font-size: 24px;
+        font-size: 2.4em;
         text-transform: uppercase;
       }
 
       p {
         display: inline-block;
         padding-top: 10px;
-        font-size: 18px;
+        font-size: 1.8em;
         width: 100%;
         // height: 170px;
         overflow: hidden;
-        
+
       }
     }
- 
+
     a {
-        display: inline-block;
-        font-family: OpenSans_Regular;
-        color: $colorLink-project;
-        font-size: 24px;
-        margin: 16px 20px;       
-        text-decoration: none;
+      display: inline-block;
+      font-family: OpenSans_Regular;
+      color: $colorLink-project;
+      font-size: 2.4em;
+      margin: 16px 20px;
+      text-decoration: none;
     }
   }
-}
-
-//project
+}//project
 
 
 .contact {
-  position: relative;
-  max-width: 1920px;
+  position: relative;  
   width: 100%;
-  height:485px;
-  display: flex;  
+  height: 485px;
+  display: flex;
   justify-content: center;
   margin: 300px 0;
   // border: 3px solid green;
@@ -551,17 +563,19 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1240px;
+    padding: 0 20px;
     width: 100%;
     height: 100%;
     // border: 2px solid rgb(0, 174, 255);
-    
+
   }
 
   &__form {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     justify-content: center;
+    font-size: 10px;
     padding-left: 40px;
     width: 45%;
     height: 100%;
@@ -572,7 +586,7 @@ body {
     h2 {
       text-transform: uppercase;
       font-family: OpenSans_Bold;
-      font-size: 36px;
+      font-size: 3.6em;
       // margin-top: 63px;
     }
 
@@ -583,16 +597,16 @@ body {
       border: 1px solid rgb(103, 100, 126);
       border-radius: 8px;
       outline-style: none;
-      font-size: 28px;
+      font-size: 2.6em;
       padding-left: 20px;
-      padding-top: 20px;
+      
 
       &::placeholder {
         color: rgba(151, 151, 151, 0.8);
         font-size: inherit;
       }
     }
-  }
+  }//form
 
   &__method {
     position: relative;
@@ -605,61 +619,64 @@ body {
     border: 1px solid rgb(103, 100, 126);
     border-radius: 8px;
     font-family: OpenSans_Bold;
+    
 
     span {
       position: absolute;
       top: -25px;
-      left: 0px;      
-      font-size: 16px;
+      left: 0px;
+      font-size: 1.6em;
       font-family: OpenSans_Bold;
 
     }
 
     &_select {
-      display: flex;
+      display: inline-flex;
       justify-content: center;
-      align-items: center;
-      width: 45%;
+      align-items: center;      
       height: 100%;
-      font-size: 24px;
+      font-size: 2.4em;
       font-family: OpenSans_SemiBold;
       cursor: pointer;
       transition: all .2s linear;
+      // border: 1px solid red;
 
       &::first-letter {
         text-transform: uppercase;
+       
       }
 
-      &:hover {        
+      &:hover {
         color: rgb(229, 168, 255);
         transition: all .2s linear;
       }
-      
-      
+
+
     }
-    
+
   }
 
-  &__button {
+  &__button {    
     margin-top: 50px;
     width: 260px;
+    padding: 0 20px;
     height: 60px;
-    
+
     border-radius: 8px;
     border: 1px solid rgba(47, 128, 237, 0.9);
     background: transparent;
-    outline-style: none;   
+    outline-style: none;
     color: rgba(47, 128, 237, 1);
-    font-size: 26px;    
+    font-size: 2.6em;
     font-family: OpenSans_SemiBold;
     cursor: pointer;
 
     &:hover {
-      border: 1px solid  rgba(47, 128, 237, 0.5);
-      box-shadow: 0 0 5px 5px  rgba(47, 128, 237, 0.5);
-      
+      border: 1px solid rgba(47, 128, 237, 0.5);
+      box-shadow: 0 0 5px 5px rgba(47, 128, 237, 0.5);
+
     }
-    
+
 
     &::first-letter {
       text-transform: uppercase;
@@ -676,36 +693,39 @@ body {
     align-items: center;
     font-size: 40px;
     font-family: OpenSans_SemiBold;
-    
-    
+
+
     div {
-      width: 80%;     
+      width: 80%;
       font-family: inherit;
-      
+      font-size: 1em;      
+
     }
 
-    &_icon {      
+    &_icon {
+      display: flex;
       img {
+        display: block;
         margin-right: 10px;
-      }  
+      }
     }
 
-  // &__messenger {
-  //   width: 511px;
-  //   height: 83px;
-  //   margin-top: 46px;
-  //   border: 1px solid rgb(103, 100, 126);
-  //   border-radius: 8px;
+    // &__messenger {
+    //   width: 511px;
+    //   height: 83px;
+    //   margin-top: 46px;
+    //   border: 1px solid rgb(103, 100, 126);
+    //   border-radius: 8px;
 
-  //   ul {
-  //     width: 100%;
-  //     height: 100%;
-  //     list-style: none;
-  //     display: flex;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //   }
-  // }
+    //   ul {
+    //     width: 100%;
+    //     height: 100%;
+    //     list-style: none;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //   }
+    // }
   }
 }
 
