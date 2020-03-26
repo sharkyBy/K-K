@@ -27,7 +27,7 @@ function removeEvent() {
   console.log('функция получения координат по событию scroll удалена!')
 }
 
-// let myCount = counter();
+
 let subScrollingX = scrollingX();
 
 function projectHorizontalScroll() {  
@@ -35,24 +35,18 @@ let container = document.querySelector('.project__container');
 let box = container.getBoundingClientRect();
 let stickyContainer = document.querySelector('#project');
 let position = window.getComputedStyle(container).top;
-position = parseInt(position.match(/\d+/))
-// console.log(position)
+position = parseInt(position.match(/\d+/)); 
 
 //координаты и размеры блока Project
 
 let blockY = Math.round(box.y);
 let blockW = Math.round(container.scrollWidth);
-// let blockWidth = box.width;
-// console.log(blockW, blockWidth)
 
 // устанавливаю высоту липкого контейнера равного ширине содержимого липкого элемента
 stickyContainer.style = `height:${blockW}px`;
 
-// console.log(blockY);
 
-
-if (blockY === position) { 
-  // myCount();    
+if (blockY === position) {    
   subScrollingX(container);
 }
 
@@ -66,26 +60,15 @@ function scrollingX() {
     return  function(container) {     
     let nextPos =Math.round(window.pageYOffset);
     let diff = nextPos - scrollPos;
-    // console.log(`prev: ${scrollPos}; next: ${nextPos}`);
-    
+    // console.log(`prev: ${scrollPos}; next: ${nextPos}`);    
     nextPos > scrollPos ? container.scrollLeft += scrollPos !==0?diff:0 : container.scrollLeft += diff;
     // nextPos > scrollPos ? console.log(`down`) : console.log(`up`);
     scrollPos = nextPos;
-    console.log(`положение горизонтального скролла: ${container.scrollLeft}`)
-    
-  };
-  
+    // console.log(`положение горизонтального скролла: ${container.scrollLeft}`)ж    
+  }; 
   
 }
 
-
-function counter() {
-  let count = 0;
-  return function() {
-    console.log(`счетчик вызовов функции: ${count++}`);
-    return count++;
-  } 
-}
 
 
 
