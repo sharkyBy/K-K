@@ -358,5 +358,18 @@
     padding: 0 10px;
   }
 }
+@media screen and (max-width: 574px) {
+  .navigation {
+    font-size: 12px;
+  }
+  .navigation__nav {
+    margin-top: 15px;
+  }
+  .navigation .btn {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
 
 /*# sourceMappingURL=media.css.map */
