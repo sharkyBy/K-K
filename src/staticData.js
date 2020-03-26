@@ -369,8 +369,8 @@ export const store = {
       },
       contact: {
         formName:'обратная связь',
-        callMe:'Позвонить мне',
-        messageMe:'Написать мне',
+        callMe:'Позвонить',
+        messageMe:'Написать',
         buttonName:'связаться со мной',
         before:'Как связаться с тобой?',
         tel:'+375 29 519-80-07',

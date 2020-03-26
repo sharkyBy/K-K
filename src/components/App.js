@@ -3,7 +3,7 @@ import Mainpage from './Mainpage';
 import Community from './Community';
 import Navigation from './header/Navigation';
 import { Route, Switch, Redirect } from 'react-router';
-import {userLang,pseudo} from '../Function.js'
+import {userLang} from '../function/mainFunction.js'
 
 
 

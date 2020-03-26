@@ -367,13 +367,15 @@ body {
     height: 67%;
     margin-top: 178px;
     margin-bottom: 14.5%;
+    // border: 1px solid red;
+    
 
     &_wrapper {
       position: relative;
       width: 100%;
       height: 500px;
       color: $color-aboutUsText;      
-      border: 1px dashed blue;
+      // border: 1px dashed blue;
       overflow: hidden;
     }
 
@@ -390,22 +392,22 @@ body {
     }
 
     h1 {
-      padding: 55px 0px 10px 36px;
+      padding: 30px 0px 10px 36px;
       font-family: OpenSans_Bold;
       text-transform: uppercase;
       color: $color-aboutUsTitle;
+      
       
     }
 
     p {
       padding: 0px 36px 55px;      
       overflow-wrap: break-word;
-      white-space: pre-line;
+      white-space: normal;
     }
   }//text
 
-  &__btn {
-    
+  &__btn {      
     display: inline-block;    
     height: 60px;
     margin: 0 0 50px 36px;
@@ -482,7 +484,7 @@ body {
     }
 
     //скрываем scrollbar в firefox
-    // scrollbar-width: none;
+    scrollbar-width: none;
 
   }
 
@@ -597,7 +599,7 @@ body {
       border: 1px solid rgb(103, 100, 126);
       border-radius: 8px;
       outline-style: none;
-      font-size: 2.6em;
+      font-size: 2.4em;
       padding-left: 20px;
       
 
@@ -656,7 +658,8 @@ body {
 
   }
 
-  &__button {    
+  &__button {
+       
     margin-top: 50px;
     width: 260px;
     padding: 0 20px;
@@ -667,7 +670,7 @@ body {
     background: transparent;
     outline-style: none;
     color: rgba(47, 128, 237, 1);
-    font-size: 2.6em;
+    font-size: 2.3em;
     font-family: OpenSans_SemiBold;
     cursor: pointer;
 
@@ -676,7 +679,6 @@ body {
       box-shadow: 0 0 5px 5px rgba(47, 128, 237, 0.5);
 
     }
-
 
     &::first-letter {
       text-transform: uppercase;

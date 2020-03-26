@@ -74,11 +74,14 @@
 
   .aboutUs__text_wrapper {
     font-size: 14px;
-    height: 400px;
+    height: 450px;
+  }
+  .aboutUs__text_wrapper h1 {
+    padding: 30px 0px 10px 36px;
   }
   .aboutUs__text_wrapper p {
     overflow-wrap: break-word;
-    white-space: normal;
+    white-space: break-space;
   }
   .aboutUs__btn {
     height: 50px;
@@ -100,7 +103,7 @@
   }
   .contact__form {
     width: 40%;
-    font-size: 8px;
+    font-size: 7px;
   }
   .contact__form input {
     height: 50px;
@@ -118,7 +121,7 @@
   }
   .contact__button {
     margin-top: 40px;
-    width: 200px;
+    width: 220px;
     height: 50px;
   }
 }
@@ -161,14 +164,26 @@
   }
   .aboutUs__text_wrapper {
     font-size: 12px;
-    height: 350px;
+    height: 380px;
   }
   .aboutUs__text_wrapper h1 {
-    padding: 30px 0 10px 36px;
+    font-size: 20px;
+    line-height: 1.1;
+    padding: 20px 0 10px 20px;
+  }
+  .aboutUs__text_wrapper p {
+    padding: 0px 20px 30px;
   }
   .aboutUs__btn {
-    height: 50px;
-    font-size: 18px;
+    height: 40px;
+    padding: 4px 20px;
+    font-size: 16px;
+  }
+  .aboutUs__carousel {
+    margin-bottom: 30%;
+  }
+  .aboutUs__carousel ul {
+    margin-top: 110%;
   }
 
   .project__container {
@@ -186,7 +201,7 @@
   }
   .contact__form {
     width: 40%;
-    font-size: 7px;
+    font-size: 6.5px;
     padding-left: 25px;
   }
   .contact__form input {
@@ -202,8 +217,9 @@
   }
   .contact__button {
     margin-top: 30px;
-    width: 160px;
+    width: 180px;
     height: 40px;
+    line-height: 1;
   }
   .contact__info {
     width: 45%;
@@ -216,7 +232,7 @@
 }
 @media screen and (max-width: 640px) {
   .navigation {
-    font-size: 18px;
+    font-size: 16px;
   }
   .navigation__nav {
     margin-top: 15px;
@@ -254,17 +270,19 @@
   }
 
   .aboutUs__text {
-    margin-top: 90px;
+    margin-top: 120px;
   }
   .aboutUs__text_wrapper {
     font-size: 11px;
     height: 320px;
   }
   .aboutUs__text_wrapper h1 {
-    padding: 30px 0 10px 20px;
+    font-size: 16px;
+    padding: 20px 0 10px 20px;
   }
   .aboutUs__text_wrapper p {
-    padding: 0px 20px 55px;
+    padding: 0px 20px 30px;
+    line-height: 1.2;
   }
   .aboutUs__btn {
     height: 40px;
@@ -277,17 +295,27 @@
     top: 100px;
   }
   .project__card {
-    min-width: 238px;
-    height: 380.8px;
-    font-size: 7px;
+    min-width: 204px;
+    height: 326.4px;
+    font-size: 6px;
+    margin: 10px;
+  }
+  .project__card figcaption {
+    padding: 10px;
   }
 
   .contact {
-    height: 300px;
+    height: 600px;
     margin: 150px 0;
   }
+  .contact__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .contact__form {
-    width: 45%;
+    width: 70%;
+    height: 45%;
     font-size: 7px;
     padding-left: 25px;
   }
@@ -304,16 +332,30 @@
   }
   .contact__button {
     margin-top: 30px;
-    width: 160px;
+    width: 200px;
     height: 40px;
   }
   .contact__info {
-    width: 45%;
+    width: 70%;
+    height: 45%;
     font-size: 22px;
   }
   .contact__info_icon img {
     width: 32px;
     height: auto;
+  }
+}
+@media screen and (max-width: 575px) {
+  .navigation {
+    font-size: 14px;
+  }
+  .navigation__nav {
+    margin-top: 15px;
+  }
+  .navigation .btn {
+    height: 32px;
+    font-size: 14px;
+    padding: 0 10px;
   }
 }
 

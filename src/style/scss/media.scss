@@ -30,11 +30,7 @@
   }
 
   .arrow {
-
     height: $arrowWidth * 0.45;
-
-
-
   }
 
 
@@ -52,7 +48,6 @@
   }
 
   .contact {
-
     height: 400px;
 
     &__form {
@@ -92,7 +87,6 @@
       &-teamLogo {
         margin-top: 16%;
         max-width: 45%;
-
       }
 
       &-partnerLogo {
@@ -107,17 +101,19 @@
 
   .arrow {
     height: $arrowWidth * 0.4;
-
   }
 
   .aboutUs {
     &__text {
       &_wrapper {
         font-size: 14px;
-        height: 400px;
+        height: 450px;
+        h1 {
+          padding: 30px 0px 10px 36px;
+        }
         p {
           overflow-wrap: break-word;
-          white-space: normal;
+          white-space: break-space;
         }
       }
     }
@@ -147,7 +143,7 @@
 
     &__form {
       width: 40%;
-      font-size: 8px;
+      font-size: 7px;
 
       input {
         height: 50px;
@@ -174,7 +170,7 @@
 
     &__button {
       margin-top: 40px;
-      width: 200px;
+      width: 220px;
       height: 50px;
     }
   }
@@ -232,20 +228,35 @@
   .aboutUs {
     &__text {
       margin-top: 120px;
+      // margin-bottom: 30%;
       &_wrapper {
-        font-size: 12px;
-        height: 350px;
+        font-size: 12px;      
+        height: 380px;
 
         h1 {
-          padding: 30px 0 10px 36px;
+          font-size: 20px;
+          line-height: 1.1;
+          padding: 20px 0 10px 20px;
+        }
+        p {
+          padding: 0px 20px 30px;  
         }
       }
     }
+
     &__btn {
-      height: 50px;
-      font-size: 18px;
+      height: 40px;
+      padding: 4px 20px;
+      font-size: 16px;
     }
 
+    &__carousel {
+      margin-bottom: 30%;
+      ul {
+        margin-top: 110%;
+      }
+    }
+   
   }
 
   .project {
@@ -267,7 +278,7 @@
 
     &__form {
       width: 40%;
-      font-size: 7px;
+      font-size: 6.5px;
       padding-left: 25px;
 
       input {
@@ -287,8 +298,9 @@
 
      &__button {
       margin-top: 30px;
-      width: 160px;
+      width: 180px;
       height: 40px;
+      line-height: 1;
     }
 
     &__info {
@@ -312,7 +324,7 @@
 @media screen and (max-width:640px) {  
 
   .navigation {
-    font-size: 18px;
+    font-size: 16px;
     &__nav {
       margin-top: 15px;
     }
@@ -365,16 +377,18 @@
 
   .aboutUs {
     &__text {
-      margin-top: 90px;
+      margin-top: 120px;
       &_wrapper {
         font-size: 11px;
         height: 320px;
 
         h1 {
-          padding: 30px 0 10px 20px;
+          font-size: 16px;
+          padding: 20px 0 10px 20px;
         }
         p {
-          padding: 0px 20px 55px; 
+          padding: 0px 20px 30px; 
+          line-height: 1.2;
         }
       }
     }
@@ -393,20 +407,32 @@
     }
 
     &__card {
-      min-width: $card-minWidth*0.7;
-      height: $card-minWidth * 0.7 * 1.6;
-      font-size: 7px;
+      min-width: $card-minWidth*0.6;
+      height: $card-minWidth * 0.6 * 1.6;
+      font-size: 6px;
+      margin: 10px;
+
+      figcaption {
+        padding: 10px;
+      }
 
     }
   }
 
-  .contact {
-  
-    height: 300px;
+  .contact {    
+    height: 600px;
     margin: 150px 0;
+    
+
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     &__form {
-      width: 45%;
+      width: 70%;
+      height: 45%;
       font-size: 7px;
       padding-left: 25px;
 
@@ -427,13 +453,15 @@
 
      &__button {
       margin-top: 30px;
-      width: 160px;
+      width: 200px;
       height: 40px;
     }
 
     &__info {
-      width: 45%;
+      width: 70%;
+      height: 45%;
       font-size: 22px;
+      
 
       &_icon {
         img {
@@ -447,4 +475,21 @@
 
    
   }//contact
+}//640px
+
+@media screen and (max-width:575px) {  
+
+  .navigation {
+    font-size: 14px;
+    &__nav {
+      margin-top: 15px;
+    }
+
+    .btn {
+      height: 32px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+
+  }
 }
