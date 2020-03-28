@@ -19,7 +19,7 @@ class  AboutUs extends React.Component {
        </div>        
 
       <div className='aboutUs__carousel'>
-        <AboutUsCarousel imgSrc={this.props.carousel.imgSrc} coords={this.coords}/>
+        <AboutUsCarousel imgSrc={this.props.carousel.imgSrc}/>
       </div>
     </div>
   )

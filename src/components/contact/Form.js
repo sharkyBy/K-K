@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import Button from './../header/Button';
 
 export default function Form(props) {
 const [callMe,setCallMe] = useState(null);
 const [messageMe,setMessageMe] = useState(null)
 
   return (
-    <form className="contact__form">
+    <form className="contact__form" name='contactMe'>
       <h2>{props.formName}</h2>
       <input
         placeholder="+375 __ ___-__-__"
@@ -25,9 +26,13 @@ const [messageMe,setMessageMe] = useState(null)
         onClick={()=>setMessageMe(messageMe + 1)}> {props.messageMe} {messageMe}</div>
       </div>
 
-      <button className="contact__button" onClick={props.handleSubmit}>
-        {props.buttonName}
-      </button>
+      <Button 
+        onClick={props.handleSubmit}        
+        btnName={props.btnName}
+        type='button'
+        classN='btn contact__btn'
+        form='contactMe' />        
+      
     </form>
   )
 

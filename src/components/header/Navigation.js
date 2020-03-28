@@ -15,7 +15,7 @@ export default class Navigation extends React.Component {
       <div className="navigation" id='navigation'>
         <div className='navigation__container'>
           <Nav  {...this.props} />
-          <Button {...this.props} classN='btn' />
+          <Button {...this.props} type='button' classN='btn navigation__btn'/>
           <Lang {...this.props} />
         </div>
 

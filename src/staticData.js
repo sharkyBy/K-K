@@ -16,11 +16,9 @@ export const store = {
 
 
         ],
-
         btnName: 'contact us',
-
-
       },
+
       content: {
         companyLogo: './img/k-and-k-logo.svg',
         partnerLink: 'https://ottolo.com/',
@@ -30,34 +28,7 @@ export const store = {
       }
     },
 
-    main: {
-      // aboutUs: {
-      //   text: {
-      //     title: 'about us',
-      //     p1: `K&K TEAM is a team of experienced IT specialists, designers and digital marketers.\r
-      //       Development of chat bots, mobile and web applications;
-      //       Creation of websites on CMS;
-      //       Design of corporate identity, logo and design prototypes;
-      //       Design of advertising materials for social networks and printing.\r
-      //       Our customer works with a well-coordinated team, not scattered performers.
-      //       Also thanks to the network of partner companies, the customer reduces the 
-      //       time to search for performers in related areas: hosting, accounting and legal 
-      //       services, SEO-promotion and advertising. \r
-      //       We worked with customers from Belarus, Russia, USA, Israel and Qatar.
-      //       We are not only engaged in commerce, but also develop IT education in our home country.`
-      //   },
-
-      //   carousel: {
-      //     imgSrc: [
-      //       './img/team.png',
-      //       './img/webDevelopment.png',
-      //       './img/mobileDevelopment.png',
-      //       './img/design.png'
-      //     ]
-
-      //   }
-
-      // },
+    main: { 
 
       aboutUs: {
         text: [
@@ -177,7 +148,7 @@ export const store = {
         formName:'callback form',
         callMe:'Call me',
         messageMe:'Message me',
-        buttonName:'contact me',
+        btnName:'contact me',
         before:'How to contact you?',
         tel:'+375 29 519-80-07',
         mail:'contact@kandk.team' ,     
@@ -371,7 +342,7 @@ export const store = {
         formName:'обратная связь',
         callMe:'Позвонить',
         messageMe:'Написать',
-        buttonName:'связаться со мной',
+        btnName:'связаться со мной',
         before:'Как связаться с тобой?',
         tel:'+375 29 519-80-07',
         mail:'contact@kandk.team' ,  

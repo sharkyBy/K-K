@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './../header/Button';
 
 
 function AboutUsTextItem(props) {
@@ -13,9 +14,11 @@ function AboutUsTextItem(props) {
         <p>
           {props.text.p1}
         </p>
-        <div className={props.index !== 0 ? 'aboutUs__btn' : null}>
-          {props.index !== 0 ? props.text.btnName : null}
-        </div>
+        <Button 
+          classN={props.index !== 0 ? 'btn aboutUs__btn' : null}
+          btnName={props.index !== 0 ? props.text.btnName : null}
+          type='button'
+        />
       </div>
     
 

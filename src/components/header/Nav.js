@@ -1,21 +1,6 @@
 import React from 'react';
-import {ListLink} from './ListLink';
 
-
-/* export default function Nav(props) {
-  const listItem = props.linkName.map((item) => <ListLink linkName = {item} key = {item} classN='activeLink'/>)
-  // debugger;
-  return (
-    <nav className="header__nav">
-    <ul className="header__link">
-     {listItem}
-    </ul>
-  </nav>
-  )
-} */
-
-//Option 1
-
+import { BurgerBtn } from './BurgerBtn';
 
 
 export default class Nav extends React.Component {
@@ -41,14 +26,8 @@ export default class Nav extends React.Component {
     // debugger;
     return (
      
-      <nav className="navigation__nav" >
-        <ListLink
-        {...this.props}
-        //  linkNames={this.props.page}
-          // activePage={this.state.activePage}
-          // handleLinkClick={this.handleLinkClick}
-         
-        />
+      <nav className="navigation__nav" >        
+        <BurgerBtn {...this.props} />        
       </nav>
     )
   }

@@ -44,6 +44,21 @@ body {
   height: auto;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  height: 55px;
+  background: transparent;
+  outline-style: none;
+  font-size: 24px;
+  font-family: OpenSans_SemiBold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.btn::first-letter {
+  text-transform: uppercase;
+}
+
 .navigation {
   max-width: 1240px;
   padding: 0 20px;
@@ -63,6 +78,7 @@ body {
   display: flex;
 }
 .navigation__nav {
+  position: relative;
   flex: 1;
   height: 50%;
   font-family: OpenSans_Light;
@@ -75,7 +91,7 @@ body {
   list-style: none;
 }
 .navigation__link li {
-  display: block;
+  display: inline-block;
   position: relative;
   width: auto;
   height: 100%;
@@ -104,30 +120,19 @@ body {
 .navigation__link li a::first-letter {
   text-transform: uppercase;
 }
-.navigation .btn {
-  display: inline-block;
-  padding: 0 20px;
-  height: 55px;
+.navigation__btn {
   margin-top: 11px;
-  border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  background: transparent;
-  outline-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   color: rgba(255, 255, 255, 0.9);
-  font-family: OpenSans_SemiBold;
-  font-size: 24px;
   margin-right: 34px;
-  cursor: pointer;
 }
-.navigation .btn:hover {
+.navigation__btn:hover {
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.7);
 }
-.navigation .btn::first-letter {
-  text-transform: uppercase;
-}
 .navigation__lang {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-top: 19px;
   width: 110px;
@@ -137,7 +142,6 @@ body {
 .navigation__lang #en,
 .navigation__lang #ru {
   display: inline-block;
-  height: 100%;
   font-family: inherit;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
@@ -178,21 +182,20 @@ body {
   max-width: 1240px;
   padding: 0 20px;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .header__content {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   z-index: 1;
 }
 .header__content-teamLogo {
   display: block;
   max-width: 60%;
-  margin-top: 15vmin;
+  margin-top: 20%;
   opacity: 0.8;
 }
 .header__content-partnerLogo {
@@ -200,7 +203,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10vmin;
+  margin-top: 15%;
   max-width: 19.1%;
   width: 100%;
 }
@@ -236,8 +239,8 @@ body {
   width: 94px;
   height: 47px;
   background-color: transparent;
-  margin-top: 10vmin;
-  margin-bottom: 100px;
+  margin-top: 10%;
+  margin-bottom: 90px;
 }
 .arrow a {
   position: relative;
@@ -323,18 +326,9 @@ body {
   white-space: normal;
 }
 .aboutUs__btn {
-  display: inline-block;
-  height: 60px;
   margin: 0 0 50px 36px;
-  border: 4px solid #2f80ed;
-  border-radius: 8px;
-  padding: 8px 20px;
-  font-size: 24px;
-  font-family: OpenSans_SemiBold;
+  border: 3px solid #2f80ed;
   color: #2f80ed;
-}
-.aboutUs__btn::first-letter {
-  text-transform: uppercase;
 }
 .aboutUs__carousel {
   position: relative;
@@ -395,6 +389,12 @@ body {
   box-shadow: 0px 0px 10px 5px rgba(108, 99, 255, 0.1);
   border-radius: 8px;
 }
+.project__card:first-child {
+  margin-left: 0;
+}
+.project__card:last-child {
+  margin-right: 0;
+}
 .project__card img {
   display: block;
   width: 100%;
@@ -448,9 +448,7 @@ body {
   height: 100%;
 }
 .contact__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   font-size: 10px;
   padding-left: 40px;
   width: 45%;
@@ -514,26 +512,14 @@ body {
   color: #e5a8ff;
   transition: all 0.2s linear;
 }
-.contact__button {
-  margin-top: 50px;
-  width: 260px;
-  padding: 0 20px;
-  height: 60px;
-  border-radius: 8px;
+.contact__btn {
+  margin-top: 30px;
   border: 1px solid rgba(47, 128, 237, 0.9);
-  background: transparent;
-  outline-style: none;
   color: #2f80ed;
-  font-size: 2.3em;
-  font-family: OpenSans_SemiBold;
-  cursor: pointer;
 }
-.contact__button:hover {
+.contact__btn:hover {
   border: 1px solid rgba(47, 128, 237, 0.5);
   box-shadow: 0 0 5px 5px rgba(47, 128, 237, 0.5);
-}
-.contact__button::first-letter {
-  text-transform: uppercase;
 }
 .contact__info {
   width: 45%;
@@ -575,6 +561,28 @@ body {
   width: 70%;
   height: auto;
   margin: 0 auto;
+}
+
+/* Style the header: fixed position (always stay at the top) */
+.indicator {
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  max-width: 1240px;
+  width: 100%;
+  background-color: transparent;
+  /* The progress container */
+  /* The progress bar (scroll indicator) */
+}
+.indicator__container {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+}
+.indicator__bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
 }
 
 /*# sourceMappingURL=index.css.map */

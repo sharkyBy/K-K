@@ -1,5 +1,5 @@
 // Функция смены содержимого блока aboutUs на событие скролл 
-export function aboutUsScroll() {  
+export function aboutUsScroll() {   
   let textWrap = document.documentElement.querySelector('.aboutUs__text_wrapper'); 
   let textWrapper = [...textWrap.children];   
   let carouselWrapper = [...document.documentElement.querySelector('#carousel').children];
@@ -11,13 +11,9 @@ export function aboutUsScroll() {
       return y + height / 2;
   });
 
-
   let y = textWrap.getBoundingClientRect().y;
   let h = textWrap.getBoundingClientRect().height;
   let textCenter = Math.round(y + h / 2);
-
-  // el.scrollIntoView({block:"center",behavior: "smooth"}) 
-  // console.log(`pictCenter: ${top}; textCenter: ${textCenter}; y: ${y}`)
  
   return (
       top.map((item, index) => {

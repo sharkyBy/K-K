@@ -1,9 +1,7 @@
 import React from 'react';
 import AboutUsScopes from './AboutUsScopes';
 
-export default function AboutUsCarousel(props) {
-
-  
+export default function AboutUsCarousel(props) { 
 
   let carousel = props.imgSrc.map((item,index) => 
   <AboutUsScopes 

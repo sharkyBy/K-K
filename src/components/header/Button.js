@@ -3,6 +3,11 @@ import React from 'react';
 export default function Button(props) {
  
   return (
-    <button type='button' className={props.classN}> {props.btnName} </button>
+    <button 
+    type={props.type} 
+    className={props.classN}
+    onClick={props.onClick}
+    form={props.form}
+    > {props.btnName} </button>
  )
 }

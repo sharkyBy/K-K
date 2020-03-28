@@ -30,6 +30,7 @@ export default class Contact extends React.Component {
             value={this.state.form}
             handlePhoneChange={this.handlePhoneChange}
             handleSubmit={this.handleSubmit}
+            className='btn contact__btn'
           />
           <ContactInfo {...this.props}/>
         </div>

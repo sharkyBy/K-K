@@ -1,17 +1,23 @@
-@media screen and (max-width: 1240px) {
-  .navigation {
-    font-size: 22px;
-  }
-  .navigation .btn {
+@media screen and (max-width: 1280px) {
+  .btn {
     font-size: 22px;
     height: 45px;
   }
 
+  .navigation {
+    font-size: 22px;
+  }
+  .navigation__lang {
+    margin-top: 15px;
+  }
+
   .header__content-teamLogo {
     max-width: 50%;
+    margin-top: 20%;
   }
   .header__content-partnerLogo {
     max-width: 17%;
+    margin-top: 10%;
   }
   .header__content-partnerLogo span {
     font-size: 13px;
@@ -19,6 +25,7 @@
 
   .arrow {
     height: 42.3px;
+    margin-top: 5%;
   }
 
   .project__container {
@@ -38,7 +45,7 @@
     font-size: 9px;
   }
   .contact__form input {
-    height: 60px;
+    height: 55px;
   }
   .contact__method {
     height: 60px;
@@ -49,12 +56,16 @@
   }
 }
 @media screen and (max-width: 975px) {
+  .btn {
+    height: 40px;
+    font-size: 20px;
+  }
+
   .navigation {
     font-size: 20px;
   }
-  .navigation .btn {
-    height: 40px;
-    font-size: 20px;
+  .navigation__lang {
+    margin-top: 12px;
   }
 
   .header__content-teamLogo {
@@ -82,10 +93,6 @@
   .aboutUs__text_wrapper p {
     overflow-wrap: break-word;
     white-space: break-space;
-  }
-  .aboutUs__btn {
-    height: 50px;
-    font-size: 20px;
   }
 
   .project__container {
@@ -119,36 +126,41 @@
     width: 40px;
     height: auto;
   }
-  .contact__button {
+  .contact__btn {
     margin-top: 40px;
-    width: 220px;
-    height: 50px;
   }
 }
 @media screen and (max-width: 767px) {
-  .navigation {
+  .btn {
+    height: 40px;
     font-size: 18px;
   }
-  .navigation .btn {
-    height: 40px;
+
+  .navigation {
     font-size: 18px;
   }
   .navigation__link li {
     margin-right: 26px;
   }
-  .navigation .btn {
+  .navigation__link li:before,
+.navigation__link li:after {
+    height: 2px;
+  }
+  .navigation__btn {
     margin-right: 26px;
   }
   .navigation__lang {
     width: 90px;
+    margin-top: 12px;
   }
 
   .header__content-teamLogo {
-    margin-top: 16%;
+    margin-top: 22%;
     max-width: 50%;
   }
   .header__content-partnerLogo {
-    max-width: 20%;
+    max-width: 22%;
+    margin-top: 12%;
   }
   .header__content-partnerLogo span {
     font-size: 9px;
@@ -156,7 +168,8 @@
 
   .arrow {
     height: 28.2px;
-    margin: 50px 0;
+    margin-top: 5%;
+    margin-bottom: 30px;
   }
 
   .aboutUs__text {
@@ -173,11 +186,6 @@
   }
   .aboutUs__text_wrapper p {
     padding: 0px 20px 30px;
-  }
-  .aboutUs__btn {
-    height: 40px;
-    padding: 4px 20px;
-    font-size: 16px;
   }
   .aboutUs__carousel {
     margin-bottom: 30%;
@@ -215,10 +223,8 @@
   .contact__method span {
     top: -18px;
   }
-  .contact__button {
+  .contact__btn {
     margin-top: 30px;
-    width: 180px;
-    height: 40px;
     line-height: 1;
   }
   .contact__info {
@@ -231,42 +237,31 @@
   }
 }
 @media screen and (max-width: 640px) {
+  .btn {
+    height: 32px;
+    font-size: 16px;
+  }
+
   .navigation {
     font-size: 16px;
   }
   .navigation__nav {
     margin-top: 15px;
   }
-  .navigation .btn {
-    height: 32px;
-    font-size: 16px;
-  }
-  .navigation__link li {
-    margin-right: 26px;
-  }
-  .navigation .btn {
+  .navigation__btn {
     margin-right: 26px;
   }
   .navigation__lang {
     width: 80px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
-  .header__content-teamLogo {
-    margin-top: 16%;
-    max-width: 45%;
-  }
-  .header__content-partnerLogo {
-    margin-top: 50px;
-    max-width: 18%;
-  }
   .header__content-partnerLogo span {
     font-size: 8px;
   }
 
   .arrow {
     height: 18.8px;
-    margin: 30px 0;
   }
 
   .aboutUs__text {
@@ -285,10 +280,7 @@
     line-height: 1.2;
   }
   .aboutUs__btn {
-    height: 40px;
-    font-size: 16px;
-    margin: 0 0 40px 20px;
-    padding: 5px 20px;
+    margin: 0 0 30px 20px;
   }
 
   .project__container {
@@ -330,15 +322,19 @@
   .contact__method span {
     top: -18px;
   }
-  .contact__button {
+  .contact__btn {
     margin-top: 30px;
-    width: 200px;
-    height: 40px;
   }
   .contact__info {
     width: 70%;
     height: 45%;
     font-size: 22px;
+  }
+  .contact__info div {
+    text-align: center;
+  }
+  .contact__info_icon {
+    justify-content: center;
   }
   .contact__info_icon img {
     width: 32px;
@@ -346,29 +342,220 @@
   }
 }
 @media screen and (max-width: 575px) {
+  .btn {
+    height: 32px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
   .navigation {
     font-size: 14px;
   }
   .navigation__nav {
     margin-top: 15px;
   }
-  .navigation .btn {
-    height: 32px;
+
+  .aboutUs__text {
+    width: 65%;
+    top: 60px;
+    margin-top: 100px;
+  }
+  .aboutUs__text_wrapper {
+    font-size: 10px;
+    height: 320px;
+  }
+  .aboutUs__text_wrapper h1 {
     font-size: 14px;
-    padding: 0 10px;
+    padding: 20px 0 10px 20px;
+  }
+  .aboutUs__text_wrapper p {
+    padding: 0px 20px 30px;
+    line-height: 1.2;
+  }
+  .aboutUs__btn {
+    margin: 0 0 30px 20px;
   }
 }
-@media screen and (max-width: 574px) {
+@media screen and (max-width: 480px) {
+  .btn {
+    height: 26px;
+    font-size: 11px;
+  }
+
   .navigation {
-    font-size: 12px;
+    font-size: 11px;
   }
   .navigation__nav {
-    margin-top: 15px;
+    margin-top: 10px;
   }
-  .navigation .btn {
-    height: 32px;
-    font-size: 12px;
-    padding: 0 10px;
+  .navigation__lang {
+    margin-top: 7px;
+    width: 55px;
+  }
+
+  .header__content-teamLogo {
+    margin-top: 18%;
+    max-width: 50%;
+  }
+  .header__content-partnerLogo {
+    max-width: 22%;
+    margin-top: 8%;
+  }
+  .header__content-partnerLogo span {
+    font-size: 8px;
+    line-height: 1;
+  }
+
+  .arrow {
+    height: 14.1px;
+    margin-top: 3%;
+    margin-bottom: 20px;
+  }
+
+  .aboutUs__text {
+    top: 70px;
+    margin-top: 70px;
+    width: 90%;
+  }
+  .aboutUs__text_wrapper {
+    height: 280px;
+  }
+  .aboutUs__text h1 {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .aboutUs__text p {
+    padding: 0 10px 10px;
+    font-size: 9px;
+  }
+  .aboutUs__btn {
+    margin: 10px 0 10px 10px;
+  }
+  .aboutUs__carousel {
+    margin-bottom: 50%;
+  }
+  .aboutUs__carousel ul {
+    margin-top: 180%;
+  }
+
+  .project {
+    width: 100%;
+    padding: 0;
+  }
+  .project__container {
+    top: 50px;
+  }
+  .project__card {
+    min-width: 136px;
+    height: 204px;
+    font-size: 4px;
+    margin: 10px;
+  }
+  .project__card figcaption {
+    padding: 10px;
+  }
+  .project a {
+    margin: 10px;
+  }
+
+  .contact {
+    margin: 50px 0;
+  }
+  .contact__form, .contact__info {
+    min-width: 300px;
+    width: 100%;
+  }
+  .contact__info div {
+    text-align: center;
+  }
+  .contact__info_icon {
+    justify-content: center;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .burgerBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .burgerBtn::before, .burgerBtn::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  .burgerBtn::before {
+    top: 8px;
+  }
+  .burgerBtn::after {
+    bottom: 8px;
+  }
+
+  .burgerBtn-active::before {
+    transform: translate(-50%, -8px) rotate(45deg);
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .burgerBtn-active::after {
+    transform: translate(-50%, 8px) rotate(-45deg);
+    transform-origin: 50% 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .burgerBtn-active {
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+
+  .navigation__link {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    display: block;
+    list-style: none;
+    width: 100px;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .navigation__link li {
+    display: inline-block;
+    height: 30px;
+  }
+  .navigation__link li:first-child {
+    margin-bottom: 10px;
+  }
+  .navigation__link li::before {
+    height: 2px;
+    top: 20px;
+  }
+
+  .navigation__link-active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(20px);
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.4s ease-in-out;
   }
 }
 
