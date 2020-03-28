@@ -11,14 +11,6 @@
     margin-top: 15px;
   }
 
-  .header__content-teamLogo {
-    max-width: 50%;
-    margin-top: 20%;
-  }
-  .header__content-partnerLogo {
-    max-width: 17%;
-    margin-top: 10%;
-  }
   .header__content-partnerLogo span {
     font-size: 13px;
   }
@@ -28,12 +20,9 @@
     margin-top: 5%;
   }
 
-  .project__container {
-    top: 100px;
-  }
   .project__card {
-    min-width: 306px;
-    height: 489.6px;
+    min-width: 270px;
+    height: 432px;
     font-size: 9px;
   }
 
@@ -83,6 +72,10 @@
     height: 37.6px;
   }
 
+  .aboutUs__text {
+    top: 50px;
+    margin-top: 50px;
+  }
   .aboutUs__text_wrapper {
     font-size: 14px;
     height: 450px;
@@ -96,17 +89,17 @@
   }
 
   .project__container {
-    top: 100px;
+    top: 50px;
   }
   .project__card {
-    min-width: 272px;
-    height: 435.2px;
+    min-width: 240px;
+    height: 384px;
     font-size: 8px;
   }
 
   .contact {
     height: 360px;
-    margin: 200px 0;
+    margin: 150px 0;
   }
   .contact__form {
     width: 40%;
@@ -174,6 +167,7 @@
 
   .aboutUs__text {
     margin-top: 120px;
+    width: 65%;
   }
   .aboutUs__text_wrapper {
     font-size: 12px;
@@ -189,17 +183,18 @@
   }
   .aboutUs__carousel {
     margin-bottom: 30%;
+    width: 25%;
   }
   .aboutUs__carousel ul {
     margin-top: 110%;
   }
 
   .project__container {
-    top: 100px;
+    top: 60px;
   }
   .project__card {
-    min-width: 272px;
-    height: 435.2px;
+    min-width: 240px;
+    height: 384px;
     font-size: 8px;
   }
 
@@ -287,8 +282,8 @@
     top: 100px;
   }
   .project__card {
-    min-width: 204px;
-    height: 326.4px;
+    min-width: 180px;
+    height: 288px;
     font-size: 6px;
     margin: 10px;
   }
@@ -375,6 +370,41 @@
   .aboutUs__btn {
     margin: 0 0 30px 20px;
   }
+
+  .project {
+    width: 100%;
+    padding: 0;
+  }
+  .project__container {
+    top: 50px;
+  }
+  .project__card {
+    min-width: 150px;
+    height: 255px;
+    font-size: 6px;
+    margin: 10px;
+  }
+  .project__card img {
+    height: 35%;
+  }
+  .project__card figcaption {
+    padding: 0px;
+    height: 48%;
+  }
+  .project__card figcaption h1 {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .project__card figcaption p {
+    padding: 0 10px 10px;
+    line-height: 1;
+  }
+  .project__card figcaption a {
+    margin: 15px 10px 0;
+  }
+  .project a {
+    margin: 10px;
+  }
 }
 @media screen and (max-width: 480px) {
   .btn {
@@ -444,15 +474,6 @@
   }
   .project__container {
     top: 50px;
-  }
-  .project__card {
-    min-width: 136px;
-    height: 204px;
-    font-size: 4px;
-    margin: 10px;
-  }
-  .project__card figcaption {
-    padding: 10px;
   }
   .project a {
     margin: 10px;

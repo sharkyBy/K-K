@@ -6,8 +6,8 @@ export function BurgerBtn(props) {
 
   function activeBtn(event) {
     isActive !==null ? setIsActive(null):setIsActive({burger:'burgerBtn-active',menu:'navigation__link-active'});
-    console.log(isActive !== null? isActive.burger:null);    
-    console.log(event.currentTarget.tagName);
+    
+    // console.log(event.currentTarget.tagName);
     
   }
 
