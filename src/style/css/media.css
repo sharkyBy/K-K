@@ -1,4 +1,17 @@
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .header__content-teamLogo {
+    max-width: 45%;
+  }
+  .header__content-partnerLogo {
+    margin-top: 12vmin;
+  }
+
+  .arrow {
+    height: 37.6px;
+    margin-top: 7vmin;
+  }
+}
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
   .btn {
     font-size: 22px;
     height: 45px;
@@ -9,10 +22,6 @@
   }
   .navigation__lang {
     margin-top: 15px;
-  }
-
-  .header__content-partnerLogo span {
-    font-size: 13px;
   }
 
   .arrow {
@@ -42,6 +51,11 @@
   .contact__info {
     width: 40%;
     font-size: 34px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+  .header__content-teamLogo {
+    max-width: 40%;
   }
 }
 @media screen and (max-width: 975px) {

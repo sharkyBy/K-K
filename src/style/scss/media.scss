@@ -1,6 +1,23 @@
 @import "_variables.scss";
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width:1366px) and (max-height:768px) {
+  .header {
+    &__content {      
+      &-teamLogo {
+        max-width: 45%;
+      }
+      &-partnerLogo {
+        margin-top: 12vmin;
+      }     
+    }
+  }
+  .arrow {
+    height: $arrowWidth * 0.4;
+    margin-top: 7vmin;
+  }
+}
+
+@media screen and (max-width:1280px) and (max-height:1024px) {
   .btn {
     font-size: 22px;
     height: 45px;
@@ -12,19 +29,7 @@
     &__lang {
       margin-top: 15px;
     }
-  }
-
-  .header {
-    &__content {      
-
-      &-partnerLogo {
-        
-        span {
-          font-size: 13px;
-        }
-      }
-    }
-  }
+  }  
 
   .arrow {
     height: $arrowWidth * 0.45;
@@ -64,7 +69,17 @@
     }
   }
 
-}// 1240px
+}// 1240px x 1024px
+
+@media screen and (max-width:1280px) and (max-height:800px) {
+  .header {
+    &__content {      
+      &-teamLogo {
+        max-width: 40%;
+      }      
+    }
+  }
+}//1280px x 800px
 
 @media screen and (max-width:975px) {
   .btn {
