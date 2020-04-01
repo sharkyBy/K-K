@@ -2,19 +2,17 @@ import React, { useState } from 'react';
 import { ListLink } from './ListLink';
 
 export function BurgerBtn(props) {
-  const [isActive, setIsActive] = useState(null);
+  const [isActive, setIsActive] = useState(false);
 
-  function activeBtn(event) {
-    isActive !==null ? setIsActive(null):setIsActive({burger:'burgerBtn-active',menu:'navigation__link-active'});
-    
-    // console.log(event.currentTarget.tagName);
+  let activeBtn=()=> {  
+    !isActive ? setIsActive({burger:'burgerBtn-active',menu:'navigation__link-active'}):setIsActive(false);   
     
   }
 
   return (
     <div className='burger' onClick={activeBtn}>
-      <span className={`burgerBtn ${isActive !== null? isActive.burger:null}`}></span>
-      <ListLink {...props} classN={isActive !== null? isActive.menu:null}/>
+      <span className={`burgerBtn ${!isActive ? null:isActive.burger}`}></span>
+      <ListLink {...props}  classN={!isActive ? null:isActive.menu} />
     </div>
   )
 }
