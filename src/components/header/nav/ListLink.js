@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkItem from './LinkItem';
-import { stopProp } from '../../function/mainFunction';
+
 
 
 export  const ListLink = (props) => {

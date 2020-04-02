@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from './../header/Button';
+import Button from '../../Button';
 
 export default function Form(props) {
 const [callMe,setCallMe] = useState(null);

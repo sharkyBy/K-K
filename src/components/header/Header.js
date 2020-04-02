@@ -1,6 +1,6 @@
 import React from 'react';
-// import Navigation from './Navigation';
 import HeaderContent from './HeaderContent';
+import ContactUsForm from '../contact/contactUs/ContactUsFortm';
 
 
 export default function Header(props) {
@@ -11,6 +11,7 @@ export default function Header(props) {
     <header className="header">
       <div className='header__container' >        
         <HeaderContent data={props.data.content} />
+        <ContactUsForm contactUs={props.contactUs} />
       </div>
 
     </header>

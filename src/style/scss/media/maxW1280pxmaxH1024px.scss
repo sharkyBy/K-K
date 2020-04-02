@@ -1,0 +1,54 @@
+
+@media screen and (max-width:1280px) and (max-height:1024px) {
+  .btn {
+    font-size: 22px;
+    height: 45px;
+  }
+
+  .navigation {
+    font-size: 22px;
+
+    &__lang {
+      margin-top: 15px;
+    }
+  }  
+
+  .arrow {
+    height: $arrowWidth * 0.45;
+    
+  }
+
+
+  .project {    
+
+    &__card {
+      min-width: $card-minWidth*0.9;
+      height: $card-minWidth * 0.9 * 1.6;
+      font-size: 9px;
+
+    }
+  }
+
+  .contact {
+    height: 400px;
+
+    &__form {
+      width: 40%;
+      font-size: 9px;
+
+      input {
+        height: 55px;
+      }
+    }
+
+    &__method {
+      height: 60px;
+    }
+
+    &__info {
+      width: 40%;
+      font-size: 34px;
+    }
+  }
+
+}// 1240px x 1024px

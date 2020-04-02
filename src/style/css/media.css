@@ -1,426 +1,20 @@
-@media screen and (max-width: 1366px) and (max-height: 768px) {
+@media only screen and (min-width: 300px) and (orientation: portrait) {
   .header__content-teamLogo {
-    max-width: 45%;
+    margin-top: 40vh;
+    max-width: 70%;
   }
   .header__content-partnerLogo {
-    margin-top: 12vmin;
+    max-width: 20vh;
+    margin-top: 15%;
   }
 
   .arrow {
-    height: 37.6px;
-    margin-top: 7vmin;
+    height: 14.1px;
+    margin-top: 10vh;
+    margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 1280px) and (max-height: 1024px) {
-  .btn {
-    font-size: 22px;
-    height: 45px;
-  }
-
-  .navigation {
-    font-size: 22px;
-  }
-  .navigation__lang {
-    margin-top: 15px;
-  }
-
-  .arrow {
-    height: 42.3px;
-    margin-top: 5%;
-  }
-
-  .project__card {
-    min-width: 270px;
-    height: 432px;
-    font-size: 9px;
-  }
-
-  .contact {
-    height: 400px;
-  }
-  .contact__form {
-    width: 40%;
-    font-size: 9px;
-  }
-  .contact__form input {
-    height: 55px;
-  }
-  .contact__method {
-    height: 60px;
-  }
-  .contact__info {
-    width: 40%;
-    font-size: 34px;
-  }
-}
-@media screen and (max-width: 1280px) and (max-height: 800px) {
-  .header__content-teamLogo {
-    max-width: 40%;
-  }
-}
-@media screen and (max-width: 975px) {
-  .btn {
-    height: 40px;
-    font-size: 20px;
-  }
-
-  .navigation {
-    font-size: 20px;
-  }
-  .navigation__lang {
-    margin-top: 12px;
-  }
-
-  .header__content-teamLogo {
-    margin-top: 16%;
-    max-width: 45%;
-  }
-  .header__content-partnerLogo {
-    max-width: 20%;
-  }
-  .header__content-partnerLogo span {
-    font-size: 11px;
-  }
-
-  .arrow {
-    height: 37.6px;
-  }
-
-  .aboutUs__text {
-    top: 50px;
-    margin-top: 50px;
-  }
-  .aboutUs__text_wrapper {
-    font-size: 14px;
-    height: 450px;
-  }
-  .aboutUs__text_wrapper h1 {
-    padding: 30px 0px 10px 36px;
-  }
-  .aboutUs__text_wrapper p {
-    overflow-wrap: break-word;
-    white-space: break-space;
-  }
-
-  .project__container {
-    top: 50px;
-  }
-  .project__card {
-    min-width: 240px;
-    height: 384px;
-    font-size: 8px;
-  }
-
-  .contact {
-    height: 360px;
-    margin: 150px 0;
-  }
-  .contact__form {
-    width: 40%;
-    font-size: 7px;
-  }
-  .contact__form input {
-    height: 50px;
-  }
-  .contact__method {
-    height: 50px;
-  }
-  .contact__info {
-    width: 45%;
-    font-size: 30px;
-  }
-  .contact__info_icon img {
-    width: 40px;
-    height: auto;
-  }
-  .contact__btn {
-    margin-top: 40px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .btn {
-    height: 40px;
-    font-size: 18px;
-  }
-
-  .navigation {
-    font-size: 18px;
-  }
-  .navigation__link li {
-    margin-right: 26px;
-  }
-  .navigation__link li:before,
-.navigation__link li:after {
-    height: 2px;
-  }
-  .navigation__btn {
-    margin-right: 26px;
-  }
-  .navigation__lang {
-    width: 90px;
-    margin-top: 12px;
-  }
-
-  .header__content-teamLogo {
-    margin-top: 22%;
-    max-width: 50%;
-  }
-  .header__content-partnerLogo {
-    max-width: 22%;
-    margin-top: 12%;
-  }
-  .header__content-partnerLogo span {
-    font-size: 9px;
-  }
-
-  .arrow {
-    height: 28.2px;
-    margin-top: 5%;
-    margin-bottom: 30px;
-  }
-
-  .aboutUs__text {
-    margin-top: 120px;
-    width: 65%;
-  }
-  .aboutUs__text_wrapper {
-    font-size: 12px;
-    height: 380px;
-  }
-  .aboutUs__text_wrapper h1 {
-    font-size: 20px;
-    line-height: 1.1;
-    padding: 20px 0 10px 20px;
-  }
-  .aboutUs__text_wrapper p {
-    padding: 0px 20px 30px;
-  }
-  .aboutUs__carousel {
-    margin-bottom: 30%;
-    width: 25%;
-  }
-  .aboutUs__carousel ul {
-    margin-top: 110%;
-  }
-
-  .project__container {
-    top: 60px;
-  }
-  .project__card {
-    min-width: 240px;
-    height: 384px;
-    font-size: 8px;
-  }
-
-  .contact {
-    height: 300px;
-    margin: 150px 0;
-  }
-  .contact__form {
-    width: 40%;
-    font-size: 6.5px;
-    padding-left: 25px;
-  }
-  .contact__form input {
-    height: 40px;
-    margin-top: 25px;
-  }
-  .contact__method {
-    height: 40px;
-    margin-top: 35px;
-  }
-  .contact__method span {
-    top: -18px;
-  }
-  .contact__btn {
-    margin-top: 30px;
-    line-height: 1;
-  }
-  .contact__info {
-    width: 45%;
-    font-size: 22px;
-  }
-  .contact__info_icon img {
-    width: 32px;
-    height: auto;
-  }
-}
-@media screen and (max-width: 640px) {
-  .btn {
-    height: 32px;
-    font-size: 16px;
-  }
-
-  .navigation {
-    font-size: 16px;
-  }
-  .navigation__nav {
-    margin-top: 15px;
-  }
-  .navigation__btn {
-    margin-right: 26px;
-  }
-  .navigation__lang {
-    width: 80px;
-    margin-top: 10px;
-  }
-
-  .header__content-partnerLogo span {
-    font-size: 8px;
-  }
-
-  .arrow {
-    height: 18.8px;
-  }
-
-  .aboutUs__text {
-    margin-top: 120px;
-  }
-  .aboutUs__text_wrapper {
-    font-size: 11px;
-    height: 320px;
-  }
-  .aboutUs__text_wrapper h1 {
-    font-size: 16px;
-    padding: 20px 0 10px 20px;
-  }
-  .aboutUs__text_wrapper p {
-    padding: 0px 20px 30px;
-    line-height: 1.2;
-  }
-  .aboutUs__btn {
-    margin: 0 0 30px 20px;
-  }
-
-  .project__container {
-    top: 100px;
-  }
-  .project__card {
-    min-width: 180px;
-    height: 288px;
-    font-size: 6px;
-    margin: 10px;
-  }
-  .project__card figcaption {
-    padding: 10px;
-  }
-
-  .contact {
-    height: 600px;
-    margin: 150px 0;
-  }
-  .contact__container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .contact__form {
-    width: 70%;
-    height: 45%;
-    font-size: 7px;
-    padding-left: 25px;
-  }
-  .contact__form input {
-    height: 40px;
-    margin-top: 25px;
-  }
-  .contact__method {
-    height: 40px;
-    margin-top: 35px;
-  }
-  .contact__method span {
-    top: -18px;
-  }
-  .contact__btn {
-    margin-top: 30px;
-  }
-  .contact__info {
-    width: 70%;
-    height: 45%;
-    font-size: 22px;
-  }
-  .contact__info div {
-    text-align: center;
-  }
-  .contact__info_icon {
-    justify-content: center;
-  }
-  .contact__info_icon img {
-    width: 32px;
-    height: auto;
-  }
-}
-@media screen and (max-width: 575px) {
-  .btn {
-    height: 32px;
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .navigation {
-    font-size: 14px;
-  }
-  .navigation__nav {
-    margin-top: 15px;
-  }
-
-  .aboutUs__text {
-    width: 65%;
-    top: 60px;
-    margin-top: 100px;
-  }
-  .aboutUs__text_wrapper {
-    font-size: 10px;
-    height: 320px;
-  }
-  .aboutUs__text_wrapper h1 {
-    font-size: 14px;
-    padding: 20px 0 10px 20px;
-  }
-  .aboutUs__text_wrapper p {
-    padding: 0px 20px 30px;
-    line-height: 1.2;
-  }
-  .aboutUs__btn {
-    margin: 0 0 30px 20px;
-  }
-
-  .project {
-    width: 100%;
-    padding: 0;
-  }
-  .project__container {
-    top: 50px;
-  }
-  .project__card {
-    min-width: 150px;
-    height: 255px;
-    font-size: 6px;
-    margin: 10px;
-  }
-  .project__card img {
-    height: 35%;
-  }
-  .project__card figcaption {
-    padding: 0px;
-    height: 48%;
-  }
-  .project__card figcaption h1 {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-  .project__card figcaption p {
-    padding: 0 10px 10px;
-    line-height: 1;
-  }
-  .project__card figcaption a {
-    margin: 15px 10px 0;
-  }
-  .project a {
-    margin: 10px;
-  }
-}
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 300px) and (max-width: 480px) {
   .btn {
     height: 26px;
     font-size: 11px;
@@ -591,6 +185,452 @@
     opacity: 1;
     transform: translateY(20px);
     transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.4s ease-in-out;
+  }
+}
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .header__content-teamLogo {
+    margin-top: 16%;
+    max-width: 45%;
+  }
+  .header__content-partnerLogo {
+    max-width: 20%;
+  }
+  .header__content-partnerLogo span {
+    font-size: 11px;
+  }
+
+  .arrow {
+    height: 37.6px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .btn {
+    height: 32px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .navigation {
+    font-size: 14px;
+  }
+  .navigation__nav {
+    margin-top: 15px;
+  }
+
+  .contactUsModal ul {
+    max-width: 300px;
+    max-height: 60px;
+  }
+  .contactUsModal .close::before {
+    font-size: 30px;
+  }
+
+  .aboutUs__text {
+    width: 65%;
+    top: 60px;
+    margin-top: 100px;
+  }
+  .aboutUs__text_wrapper {
+    font-size: 10px;
+    height: 320px;
+  }
+  .aboutUs__text_wrapper h1 {
+    font-size: 14px;
+    padding: 20px 0 10px 20px;
+  }
+  .aboutUs__text_wrapper p {
+    padding: 0px 20px 30px;
+    line-height: 1.2;
+  }
+  .aboutUs__btn {
+    margin: 0 0 30px 20px;
+  }
+
+  .project {
+    width: 100%;
+    padding: 0;
+  }
+  .project__container {
+    top: 50px;
+  }
+  .project__card {
+    min-width: 150px;
+    height: 255px;
+    font-size: 6px;
+    margin: 10px;
+  }
+  .project__card img {
+    height: 35%;
+  }
+  .project__card figcaption {
+    padding: 0px;
+    height: 48%;
+  }
+  .project__card figcaption h1 {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .project__card figcaption p {
+    padding: 0 10px 10px;
+    line-height: 1;
+  }
+  .project__card figcaption a {
+    margin: 15px 10px 0;
+  }
+  .project a {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .btn {
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .navigation {
+    font-size: 16px;
+  }
+  .navigation__nav {
+    margin-top: 15px;
+  }
+  .navigation__btn {
+    margin-right: 26px;
+  }
+  .navigation__lang {
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .header__content-partnerLogo span {
+    font-size: 8px;
+  }
+
+  .arrow {
+    height: 18.8px;
+  }
+
+  .aboutUs__text {
+    margin-top: 120px;
+  }
+  .aboutUs__text_wrapper {
+    font-size: 11px;
+    height: 320px;
+  }
+  .aboutUs__text_wrapper h1 {
+    font-size: 16px;
+    padding: 20px 0 10px 20px;
+  }
+  .aboutUs__text_wrapper p {
+    padding: 0px 20px 30px;
+    line-height: 1.2;
+  }
+  .aboutUs__btn {
+    margin: 0 0 30px 20px;
+  }
+
+  .project__container {
+    top: 100px;
+  }
+  .project__card {
+    min-width: 180px;
+    height: 288px;
+    font-size: 6px;
+    margin: 10px;
+  }
+  .project__card figcaption {
+    padding: 10px;
+  }
+
+  .contact {
+    height: 600px;
+    margin: 150px 0;
+  }
+  .contact__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__form {
+    width: 70%;
+    height: 45%;
+    font-size: 7px;
+    padding-left: 25px;
+  }
+  .contact__form input {
+    height: 40px;
+    margin-top: 25px;
+  }
+  .contact__method {
+    height: 40px;
+    margin-top: 35px;
+  }
+  .contact__method span {
+    top: -18px;
+  }
+  .contact__btn {
+    margin-top: 30px;
+  }
+  .contact__info {
+    width: 70%;
+    height: 45%;
+    font-size: 22px;
+  }
+  .contact__info div {
+    text-align: center;
+  }
+  .contact__info_icon {
+    justify-content: center;
+  }
+  .contact__info_icon img {
+    width: 32px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .navigation {
+    font-size: 18px;
+  }
+  .navigation__link li {
+    margin-right: 26px;
+  }
+  .navigation__link li:before,
+.navigation__link li:after {
+    height: 2px;
+  }
+  .navigation__btn {
+    margin-right: 26px;
+  }
+  .navigation__lang {
+    width: 90px;
+    margin-top: 12px;
+  }
+
+  .header__content-teamLogo {
+    margin-top: 22%;
+    max-width: 50%;
+  }
+  .header__content-partnerLogo {
+    max-width: 22%;
+    margin-top: 12%;
+  }
+  .header__content-partnerLogo span {
+    font-size: 9px;
+  }
+
+  .arrow {
+    height: 28.2px;
+    margin-top: 5%;
+    margin-bottom: 30px;
+  }
+
+  .aboutUs__text {
+    margin-top: 120px;
+    width: 65%;
+  }
+  .aboutUs__text_wrapper {
+    font-size: 12px;
+    height: 380px;
+  }
+  .aboutUs__text_wrapper h1 {
+    font-size: 20px;
+    line-height: 1.1;
+    padding: 20px 0 10px 20px;
+  }
+  .aboutUs__text_wrapper p {
+    padding: 0px 20px 30px;
+  }
+  .aboutUs__carousel {
+    margin-bottom: 30%;
+    width: 25%;
+  }
+  .aboutUs__carousel ul {
+    margin-top: 110%;
+  }
+
+  .project__container {
+    top: 60px;
+  }
+  .project__card {
+    min-width: 240px;
+    height: 384px;
+    font-size: 8px;
+  }
+
+  .contact {
+    height: 300px;
+    margin: 150px 0;
+  }
+  .contact__form {
+    width: 40%;
+    font-size: 6.5px;
+    padding-left: 25px;
+  }
+  .contact__form input {
+    height: 40px;
+    margin-top: 25px;
+  }
+  .contact__method {
+    height: 40px;
+    margin-top: 35px;
+  }
+  .contact__method span {
+    top: -18px;
+  }
+  .contact__btn {
+    margin-top: 30px;
+    line-height: 1;
+  }
+  .contact__info {
+    width: 45%;
+    font-size: 22px;
+  }
+  .contact__info_icon img {
+    width: 32px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 975px) {
+  .btn {
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .navigation {
+    font-size: 20px;
+  }
+  .navigation__lang {
+    margin-top: 12px;
+  }
+
+  .header__content-teamLogo {
+    margin-top: 16%;
+    max-width: 45%;
+  }
+  .header__content-partnerLogo {
+    max-width: 20%;
+  }
+  .header__content-partnerLogo span {
+    font-size: 11px;
+  }
+
+  .arrow {
+    height: 37.6px;
+  }
+
+  .aboutUs__text {
+    top: 50px;
+    margin-top: 50px;
+  }
+  .aboutUs__text_wrapper {
+    font-size: 14px;
+    height: 450px;
+  }
+  .aboutUs__text_wrapper h1 {
+    padding: 30px 0px 10px 36px;
+  }
+  .aboutUs__text_wrapper p {
+    overflow-wrap: break-word;
+    white-space: break-space;
+  }
+
+  .project__container {
+    top: 50px;
+  }
+  .project__card {
+    min-width: 240px;
+    height: 384px;
+    font-size: 8px;
+  }
+
+  .contact {
+    height: 360px;
+    margin: 150px 0;
+  }
+  .contact__form {
+    width: 45%;
+    font-size: 7px;
+  }
+  .contact__form input {
+    height: 50px;
+  }
+  .contact__method {
+    height: 50px;
+  }
+  .contact__info {
+    width: 45%;
+    font-size: 26px;
+    border: 1px solid red;
+  }
+  .contact__info_icon img {
+    width: 40px;
+    height: auto;
+  }
+  .contact__btn {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+  .header__content-teamLogo {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+  .btn {
+    font-size: 22px;
+    height: 45px;
+  }
+
+  .navigation {
+    font-size: 22px;
+  }
+  .navigation__lang {
+    margin-top: 15px;
+  }
+
+  .arrow {
+    height: 42.3px;
+  }
+
+  .project__card {
+    min-width: 270px;
+    height: 432px;
+    font-size: 9px;
+  }
+
+  .contact {
+    height: 400px;
+  }
+  .contact__form {
+    width: 40%;
+    font-size: 9px;
+  }
+  .contact__form input {
+    height: 55px;
+  }
+  .contact__method {
+    height: 60px;
+  }
+  .contact__info {
+    width: 40%;
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .header__content-teamLogo {
+    max-width: 45%;
+  }
+  .header__content-partnerLogo {
+    margin-top: 12vh;
+  }
+
+  .arrow {
+    height: 37.6px;
+    margin-top: 7vmin;
   }
 }
 

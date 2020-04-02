@@ -24,7 +24,7 @@ class App extends React.Component {
     
   };
 
-  handlerUserLang = userL => {
+  handleUserLang = userL => {
     this.setState({
       lang: userL
     });
@@ -33,20 +33,20 @@ class App extends React.Component {
   render() {
     let redirect = this.state.lang.includes("ru")
       ? "staticData_ru"
-      : "staticData";      
+      : "staticData"; 
+      // debugger;     
 
     return (
       <Switch>
         <Route>
           <Navigation
             {...this.props[redirect].header.navigation}
-            handlerUserLang={this.handlerUserLang}
+            handleUserLang={this.handleUserLang}
             language={this.state.lang}
             activePage={this.state.activePage}
-            handleLinkClick={this.handleLinkClick}
-            
-            
+            handleLinkClick={this.handleLinkClick}           
           />
+          
           <Route exact path="/">
             <Redirect to="/mainpage" />
           </Route>

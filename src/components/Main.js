@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutUs from './aboutUs/AboutUs';
 import Project from './projects/Project';
-import Contact from './contact/Contact';
+import Contact from './contact/contactMe/Contact';
 
 
 export default function Main(props) {

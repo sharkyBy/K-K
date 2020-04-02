@@ -1,0 +1,23 @@
+@media screen and (max-width:480px) and (orientation:portrait) {
+  
+  .header {
+    &__content {
+      &-teamLogo {
+        margin-top: 16%;
+        max-width: 45%;
+      }
+
+      &-partnerLogo {
+        max-width: 20%;
+
+        span {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    height: $arrowWidth * 0.4;
+  }
+}

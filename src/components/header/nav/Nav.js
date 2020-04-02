@@ -4,7 +4,7 @@ import { BurgerBtn } from './BurgerBtn';
 
 
 export default function Nav (props) {
-  const [isActive,setIsActive] = useState(false);
+  // const [isActive,setIsActive] = useState(false);
     return (
      
       <nav className="navigation__nav" >        

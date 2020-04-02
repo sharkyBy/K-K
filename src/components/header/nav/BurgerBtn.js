@@ -3,6 +3,7 @@ import { ListLink } from './ListLink';
 
 export function BurgerBtn(props) {
   const [isActive, setIsActive] = useState(false);
+  // debugger;
 
   let activeBtn=()=> {  
     !isActive ? setIsActive({burger:'burgerBtn-active',menu:'navigation__link-active'}):setIsActive(false);   

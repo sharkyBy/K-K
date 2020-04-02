@@ -1,0 +1,23 @@
+
+@media only screen and (min-width:300px) and (orientation:portrait) {
+  .header {    
+    &__content {
+      &-teamLogo {
+        margin-top:40vh;
+        max-width: 70%;
+      }
+
+      &-partnerLogo {
+        max-width: 20vh;
+        margin-top: 15%;
+
+      }
+    }
+  }
+
+  .arrow {
+    height: $arrowWidth * 0.15;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+  }
+}
