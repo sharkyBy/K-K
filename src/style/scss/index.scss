@@ -23,7 +23,18 @@
   src: url(../../fonts/OpenSans-ExtraBold.ttf);
 }
 
-@import "_variables.scss";
+@import "_variables";
+@import "./media/_anyWPortrait.scss";
+@import "./media/_maxW480px";
+@import "./media/_maxW480pxPortrait";
+@import "./media/_maxW575px";
+@import "./media/_maxW640px";
+@import "./media/_maxW767px";
+@import "./media/_maxW975px";
+@import "./media/_maxW1280pxmaxH800px";
+@import "./media/_maxW1280pxmaxH1024px";
+@import "./media/_maxW1366pxmaxH768px";
+
 
 
 
