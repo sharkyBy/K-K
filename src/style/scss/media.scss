@@ -1,5 +1,5 @@
 @import "_variables";
-// @import "./_anyWPortrait.scss";
+// @import "./_media/_anyWPortrait";
 // @import "./media/_maxW480px";
 // @import "./media/_maxW480pxPortrait";
 // @import "./media/_maxW575px";
@@ -819,6 +819,7 @@
   } 
 }//480px portrait
 
+
 @media only screen and (orientation: portrait) {
   .header { 
     height: 100vh;   
@@ -837,6 +838,7 @@
     margin-top: 10vh;
   }
 }
+
 
 
 

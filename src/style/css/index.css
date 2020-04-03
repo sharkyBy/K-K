@@ -19,21 +19,6 @@
   font-family: OpenSans_ExtraBold;
   src: url(../../fonts/OpenSans-ExtraBold.ttf);
 }
-@media only screen and (orientation: portrait) {
-  .header {
-    height: 100vh;
-  }
-  .header__content-teamLogo {
-    margin-top: 40vh;
-  }
-  .header__content-partnerLogo {
-    margin-top: 10vh;
-  }
-
-  .arrow {
-    margin-top: 10vh;
-  }
-}
 * {
   margin: 0;
   padding: 0;

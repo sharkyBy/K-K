@@ -1,9 +1,10 @@
-@media only screen and (orientation: portrait) {
+
+ @media only screen and (orientation: portrait) {
   .header { 
     height: 100vh;   
     &__content {
       &-teamLogo {
-        margin-top:40vh;        
+        margin-top:35vh;        
       }
 
       &-partnerLogo {        
@@ -11,8 +12,8 @@
       }
     }
   }
-
-  .arrow {    
-    margin-top: 10vh;    
+  .arrow {
+    height: $arrowWidth * 0.25;
+    margin-top: 10vh;
   }
 }
