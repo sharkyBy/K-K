@@ -579,5 +579,23 @@
     transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.4s ease-in-out;
   }
 }
+@media screen and (min-width: 300px) and (orientation: portrait) {
+  .header {
+    height: 100vh;
+  }
+  .header__content-teamLogo {
+    margin-top: 30vh;
+    max-width: 80%;
+  }
+  .header__content-partnerLogo {
+    margin-top: 15vh;
+    min-width: 40%;
+  }
+
+  .arrow {
+    height: 14.1px;
+    margin-top: 10vh;
+  }
+}
 
 /*# sourceMappingURL=media.css.map */
