@@ -25,7 +25,7 @@ if (blockY === position) {
   subScrollingX(container,blockWidth,indicator,blockW);
   indicator.style.display='block';
   indicator.style.width = `${container.scrollLeft*100/(blockW-blockWidth)}%`;
-}else if (blockY != position) {  
+}else if (blockY !== position) {  
   indicator.style.display='none';
 }
 

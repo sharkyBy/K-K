@@ -3,23 +3,6 @@ import React from 'react';
 import LangLink from './LangLink';
 
 
-
-/* export default function Lang(props) {
-  // debugger;
-  const langName = props.lang.map((item) =>
-    (
-      <LangLink langName={item.lang} idName={item.id} key={item.id} />
-    )
-  )
-  return (
-    <div className="navigation__lang">    
-      {langName}
-    </div>
-  )
-} */
-
-
-
 export default class Lang extends React.Component {
 
   state = {
@@ -36,7 +19,7 @@ export default class Lang extends React.Component {
         activeLang: langState,
       }
     );
-    this.props.handlerUserLang(langState)
+    this.props.handleUserLang(langState)
   }
 
   render() {

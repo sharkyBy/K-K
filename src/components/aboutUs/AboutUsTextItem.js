@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './../header/Button';
+import Button from '../Button';
 
 
 function AboutUsTextItem(props) {

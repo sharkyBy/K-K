@@ -5,13 +5,15 @@ import Main from './Main';
 
 export default function Mainpage(props) {
   // debugger;
- 
+
   return (
     <Fragment>
-      <Header data={props.header} />
-      <Main data={props.main}
-     
-       />
+      <Header
+        data={props.header}
+        contactUs={props.main.contact.messenger}
+      />
+
+      <Main data={props.main} />
     </Fragment>
 
   )
