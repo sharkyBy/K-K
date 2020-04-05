@@ -1,33 +1,15 @@
 @import "_variables";
-// @import "./_media/_anyWPortrait";
-// @import "./media/_maxW480px";
-// @import "./media/_maxW480pxPortrait";
-// @import "./media/_maxW575px";
-// @import "./media/_maxW640px";
-// @import "./media/_maxW767px";
-// @import "./media/_maxW975px";
-// @import "./media/_maxW1280pxmaxH800px";
-// @import "./media/_maxW1280pxmaxH1024px";
-// @import "./media/_maxW1366pxmaxH768px";
+@import "_mixin";
 
 @media screen and (max-width:1366px) and (max-height:768px) {
-  .header {
-    &__content {      
-      &-teamLogo {
-        max-width: 45%;
-      }
-      &-partnerLogo {
-        margin-top: 12vh;
-      }     
-    }
-  }
+ 
   .arrow {
-    height: $arrowWidth * 0.4;
-    margin-top: 7vmin;
+    @include arrow ($heightCoeff:0.4,$marginTop:7vh);
   }
+    
 }// 1366x768px
 
-@media screen and (max-width:1280px) and (max-height:1024px) {
+@media screen and (max-width:1280px) {
   .btn {
     font-size: 22px;
     height: 45px;
@@ -40,12 +22,6 @@
       margin-top: 15px;
     }
   }  
-
-  .arrow {
-    height: $arrowWidth * 0.45;
-    
-  }
-
 
   .project {    
 
@@ -82,13 +58,9 @@
 }// 1240px x 1024px
 
 
-@media screen and (max-width:1280px) and (max-height:800px) {
-  .header {
-    &__content {      
-      &-teamLogo {
-        max-width: 40%;
-      }      
-    }
+@media screen and (max-width:1280px) and (max-height:800px) { 
+  .arrow {
+    @include arrow ($heightCoeff:0.4,$marginTop:5vh);    
   }
 }//1280px x 800px
 
@@ -105,27 +77,10 @@
     &__lang {
       margin-top: 12px;
     }
-  }
-
-  .header {
-    &__content {
-      &-teamLogo {
-        margin-top: 16%;
-        max-width: 45%;
-      }
-
-      &-partnerLogo {
-        max-width: 20%;
-
-        span {
-          font-size: 11px;
-        }
-      }
-    }
-  }
+  } 
 
   .arrow {
-    height: $arrowWidth * 0.4;
+    @include arrow ($heightCoeff:0.3,$marginTop:5vh);
   }
 
   .aboutUs {
@@ -200,11 +155,11 @@
 @media screen and (max-width:767px) {
   .btn {
     height: 40px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .navigation {
-    font-size: 18px;
+    font-size: 16px;
 
     &__link {
       li {
@@ -229,16 +184,7 @@
 
   .header {
     &__content {
-      &-teamLogo {
-        margin-top: 22%;
-        max-width: 50%;
-
-      }
-
       &-partnerLogo {
-        max-width: 22%;
-        margin-top: 12%;
-
         span {
           font-size: 9px;
         }
@@ -247,9 +193,7 @@
   }
 
   .arrow {
-    height: $arrowWidth * 0.3;
-    margin-top: 5%;
-    margin-bottom: 30px;
+    @include arrow ($heightCoeff:0.25,$marginTop:5vh);    
   }
 
   .aboutUs {
@@ -365,23 +309,7 @@
       width: 80px;
       margin-top: 10px;
     }
-  }
-
-  .header {
-    &__content {
-
-      &-partnerLogo {
-        span {
-          font-size: 8px;
-        }
-      }
-    }
-  }
-
-  .arrow {
-    height: $arrowWidth * 0.2;
-
-  }
+  }  
 
   .aboutUs {
     &__text {
@@ -491,6 +419,7 @@
   }//contact
 }//640px
 
+
 @media screen and (max-width:575px) {
   .btn {
     height: 32px;
@@ -505,7 +434,22 @@
       margin-top: 15px;
     }
   }
-  
+  .header {
+    &__content {
+      &-partnerLogo {
+        span {
+          font-size: 8px;          
+        }
+      }
+    }
+  }
+
+  .arrow {
+    @include arrow ($heightCoeff:0.2,$marginTop:5vh);    
+  }
+
+
+
   //modal
 .contactUsModal {
   ul {    
@@ -518,8 +462,6 @@
   }
   
 }// modal
-
-
 
   .aboutUs {
     &__text {
@@ -546,9 +488,7 @@
     &__btn {
       margin: 0 0 30px 20px;
     }
-
   }
-
   
   .project {
     width: 100%;
@@ -617,18 +557,13 @@
 
   .header {
     &__content {
-      
       &-teamLogo {
-        margin-top: 20%;
-        max-width: 45%;
+        @include teamLogo ($maxWidth:70vh,$marginTop:25vh);
       }
-
       &-partnerLogo {
-        max-width: 25%;
-        margin-top: 8%;
-
+        @include partnerLogo ($maxWidth:25vh,$marginTop:12vh);
         span {
-          font-size: 8px;
+          font-size: 7px;
           line-height: 1;
         }
       }
@@ -636,9 +571,7 @@
   }
 
   .arrow {
-    height: $arrowWidth * 0.15;
-    margin-top: 4%;
-   
+    @include arrow ($heightCoeff:0.15,$marginTop:5vh); 
   }
 
   .aboutUs {
@@ -801,8 +734,7 @@
 } //max 480px
 
 @media screen and (max-width:480px) and (orientation:portrait) {  
-  .header {
-    
+  .header {    
     &__content {
       &-teamLogo {       
         max-width: 70%;        
@@ -822,7 +754,7 @@
 
 @media only screen and (orientation: portrait) {
   .header { 
-    height: 100vh;   
+      
     &__content {
       &-teamLogo {
         margin-top:35vh;        
@@ -831,17 +763,12 @@
       &-partnerLogo {        
         margin-top: 10vh;       
       }
-    }
-  }
+    }  
+
   .arrow {
     height: $arrowWidth * 0.25;
     margin-top: 10vh;
   }
+
 }
-
-
-
-
-
-
-
+}//portrait

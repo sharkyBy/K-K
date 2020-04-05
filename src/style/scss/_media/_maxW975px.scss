@@ -12,25 +12,8 @@
     }
   }
 
-  .header {
-    &__content {
-      &-teamLogo {
-        margin-top: 16%;
-        max-width: 45%;
-      }
-
-      &-partnerLogo {
-        max-width: 20%;
-
-        span {
-          font-size: 11px;
-        }
-      }
-    }
-  }
-
   .arrow {
-    height: $arrowWidth * 0.4;
+    @include arrow ($heightCoeff:0.3,$marginTop:5%);
   }
 
   .aboutUs {

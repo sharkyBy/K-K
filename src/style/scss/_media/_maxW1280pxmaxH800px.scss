@@ -1,9 +1,5 @@
-@media screen and (max-width:1280px) and (max-height:800px) {
-  .header {
-    &__content {      
-      &-teamLogo {
-        max-width: 40%;
-      }      
-    }
+@media screen and (max-width:1280px) and (max-height:800px) { 
+  .arrow {
+    @include arrow ($heightCoeff:0.4,$marginTop:5vh);    
   }
 }//1280px x 800px

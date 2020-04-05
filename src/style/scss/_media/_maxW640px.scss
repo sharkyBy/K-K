@@ -19,23 +19,7 @@
       width: 80px;
       margin-top: 10px;
     }
-  }
-
-  .header {
-    &__content {
-
-      &-partnerLogo {
-        span {
-          font-size: 8px;
-        }
-      }
-    }
-  }
-
-  .arrow {
-    height: $arrowWidth * 0.2;
-
-  }
+  }  
 
   .aboutUs {
     &__text {

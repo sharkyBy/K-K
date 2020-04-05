@@ -1,17 +1,10 @@
 @media screen and (max-width: 1366px) and (max-height: 768px) {
-  .header__content-teamLogo {
-    max-width: 45%;
-  }
-  .header__content-partnerLogo {
-    margin-top: 12vh;
-  }
-
   .arrow {
     height: 37.6px;
-    margin-top: 7vmin;
+    margin-top: 7vh;
   }
 }
-@media screen and (max-width: 1280px) and (max-height: 1024px) {
+@media screen and (max-width: 1280px) {
   .btn {
     font-size: 22px;
     height: 45px;
@@ -22,10 +15,6 @@
   }
   .navigation__lang {
     margin-top: 15px;
-  }
-
-  .arrow {
-    height: 42.3px;
   }
 
   .project__card {
@@ -53,8 +42,9 @@
   }
 }
 @media screen and (max-width: 1280px) and (max-height: 800px) {
-  .header__content-teamLogo {
-    max-width: 40%;
+  .arrow {
+    height: 37.6px;
+    margin-top: 5vh;
   }
 }
 @media screen and (max-width: 975px) {
@@ -70,19 +60,9 @@
     margin-top: 12px;
   }
 
-  .header__content-teamLogo {
-    margin-top: 16%;
-    max-width: 45%;
-  }
-  .header__content-partnerLogo {
-    max-width: 20%;
-  }
-  .header__content-partnerLogo span {
-    font-size: 11px;
-  }
-
   .arrow {
-    height: 37.6px;
+    height: 28.2px;
+    margin-top: 5vh;
   }
 
   .aboutUs__text {
@@ -139,11 +119,11 @@
 @media screen and (max-width: 767px) {
   .btn {
     height: 40px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .navigation {
-    font-size: 18px;
+    font-size: 16px;
   }
   .navigation__link li {
     margin-right: 26px;
@@ -160,22 +140,13 @@
     margin-top: 12px;
   }
 
-  .header__content-teamLogo {
-    margin-top: 22%;
-    max-width: 50%;
-  }
-  .header__content-partnerLogo {
-    max-width: 22%;
-    margin-top: 12%;
-  }
   .header__content-partnerLogo span {
     font-size: 9px;
   }
 
   .arrow {
-    height: 28.2px;
-    margin-top: 5%;
-    margin-bottom: 30px;
+    height: 23.5px;
+    margin-top: 5vh;
   }
 
   .aboutUs__text {
@@ -262,14 +233,6 @@
   .navigation__lang {
     width: 80px;
     margin-top: 10px;
-  }
-
-  .header__content-partnerLogo span {
-    font-size: 8px;
-  }
-
-  .arrow {
-    height: 18.8px;
   }
 
   .aboutUs__text {
@@ -363,6 +326,15 @@
     margin-top: 15px;
   }
 
+  .header__content-partnerLogo span {
+    font-size: 8px;
+  }
+
+  .arrow {
+    height: 18.8px;
+    margin-top: 5vh;
+  }
+
   .contactUsModal ul {
     max-width: 300px;
     max-height: 60px;
@@ -445,21 +417,21 @@
   }
 
   .header__content-teamLogo {
-    margin-top: 20%;
-    max-width: 45%;
+    max-width: 70vh;
+    margin-top: 25vh;
   }
   .header__content-partnerLogo {
-    max-width: 25%;
-    margin-top: 8%;
+    max-width: 25vh;
+    margin-top: 12vh;
   }
   .header__content-partnerLogo span {
-    font-size: 8px;
+    font-size: 7px;
     line-height: 1;
   }
 
   .arrow {
     height: 14.1px;
-    margin-top: 4%;
+    margin-top: 5vh;
   }
 
   .aboutUs__text {
@@ -611,17 +583,13 @@
   }
 }
 @media only screen and (orientation: portrait) {
-  .header {
-    height: 100vh;
-  }
   .header__content-teamLogo {
     margin-top: 35vh;
   }
   .header__content-partnerLogo {
     margin-top: 10vh;
   }
-
-  .arrow {
+  .header .arrow {
     height: 23.5px;
     margin-top: 10vh;
   }

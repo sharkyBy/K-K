@@ -19,18 +19,13 @@
 
   .header {
     &__content {
-      
       &-teamLogo {
-        margin-top: 20%;
-        max-width: 45%;
+        @include teamLogo ($maxWidth:70vh,$marginTop:25vh);
       }
-
       &-partnerLogo {
-        max-width: 25%;
-        margin-top: 8%;
-
+        @include partnerLogo ($maxWidth:25vh,$marginTop:12vh);
         span {
-          font-size: 8px;
+          font-size: 7px;
           line-height: 1;
         }
       }
@@ -38,9 +33,7 @@
   }
 
   .arrow {
-    height: $arrowWidth * 0.15;
-    margin-top: 4%;
-   
+    @include arrow ($heightCoeff:0.15,$marginTop:5vh); 
   }
 
   .aboutUs {

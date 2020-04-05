@@ -24,10 +24,7 @@
 }
 
 @import "_variables";
-
-
-
-
+@import "_mixin";
 
 * {
   margin: 0;
@@ -212,7 +209,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   background-blend-mode: soft-light; //смешивание слоев
   background: url(/img/background-image.png), $bgd-container;
@@ -231,7 +228,7 @@ body {
 
   &__content {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,8 +238,7 @@ body {
 
     &-teamLogo {
       display: block;
-      max-width: 50%;
-      margin-top: 25vh;
+      @include teamLogo ($maxWidth:70vh,$marginTop:22vh);
       opacity: 0.8;
       // border: 1px solid white;      
     }
@@ -252,11 +248,8 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 15vh;
-      max-width: 19.1%;
+      @include partnerLogo ($maxWidth:20%,$marginTop:15vh);
       width: 100%;
-      // border: 1px solid green;
-
 
       a {
         display: block;
@@ -296,13 +289,11 @@ body {
 }//header
 
 .arrow {
+  //height: $arrowWidth * $heightCoeff;
   width: $arrowWidth;
-  height: $arrowWidth * 0.5;
+  @include arrow ($heightCoeff:0.5,$marginTop:8vh);  
   background-color: transparent;
-  margin-top: 10vh;
-  margin-bottom: 90px;
-
-  // border: 1px solid red;
+  
 
   a {
     position: relative;

@@ -30,16 +30,8 @@
 
   .header {
     &__content {
-      &-teamLogo {
-        margin-top: 22%;
-        max-width: 50%;
-
-      }
-
+     
       &-partnerLogo {
-        max-width: 22%;
-        margin-top: 12%;
-
         span {
           font-size: 9px;
         }
@@ -48,9 +40,7 @@
   }
 
   .arrow {
-    height: $arrowWidth * 0.3;
-    margin-top: 5%;
-    margin-bottom: 30px;
+    @include arrow ($heightCoeff:0.25,$marginTop:5vh);    
   }
 
   .aboutUs {
