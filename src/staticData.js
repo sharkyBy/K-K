@@ -13,8 +13,6 @@ export const store = {
             lang: 'РУС',
             id: 'ru'
           },
-
-
         ],
         btnName: 'contact us',
       },
@@ -146,8 +144,7 @@ export const store = {
       },
       contact: {
         formName:'callback form',
-        callMe:'Call me',
-        messageMe:'Message me',
+        method:['Call me', 'Message me'],        
         btnName:'contact me',
         before:'How to contact you?',
         tel:'+375 29 519-80-07',
@@ -340,8 +337,7 @@ export const store = {
       },
       contact: {
         formName:'обратная связь',
-        callMe:'Позвонить',
-        messageMe:'Написать',
+        method:['Позвонить', 'Написать' ],        
         btnName:'связаться со мной',
         before:'Как связаться с тобой?',
         tel:'+375 29 519-80-07',

@@ -1,7 +1,6 @@
 @import '_variables';
 
-// $tLogoMaxW=50%, $tLogoMarTop=16%,  $pLogoMaxW=19%, $pLogoMarTop=15%  $arrowCoeff, $arrowMaxW,
-
+// first screen *********************
 @mixin teamLogo ($maxWidth:50%,$marginTop:20vh) {
   max-width: $maxWidth;
   margin-top: $marginTop;
@@ -16,3 +15,4 @@
   height: $arrowWidth * $heightCoeff;
   margin-top: $marginTop;
 }
+// *********** end first screen ************
