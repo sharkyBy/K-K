@@ -652,4 +652,8 @@ body {
   width: 0%;
 }
 
+.validSuccess {
+  border: 2px solid #20dd20 !important;
+}
+
 /*# sourceMappingURL=index.css.map */
