@@ -92,14 +92,14 @@ export default function Contact(props) {
       userContact.contactMe = val;
       setPhone('');
       inputPhone.classList.remove('validSuccess');
-      alert('Данные отправлены');
+      alert(props.alert.success);
       return userContact;
       //{отправить объект}
 
     } else if (validator.isMobilePhone(phoneNumber, 'be-BY') && val === '') {
-      alert('Не выбран способ связи');
+      alert(props.alert.noMethodSelected);
     } else {
-      alert('Неверный номер телефона или  номер не принадлежит операторам сотовой связи РБ')
+      alert(props.alert.invalidPhoneNumber)
     }
 
     console.log(userContact);

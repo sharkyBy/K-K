@@ -10,8 +10,7 @@ export default function Main(props) {
   <main className='main' >
     <div className='container'>
       <AboutUs {...props.data.aboutUs} />
-      <Project {...props.data.project} />
-      
+      <Project {...props.data.project} />      
     </div>
     <Contact {...props.data.contact} />
   </main>

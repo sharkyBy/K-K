@@ -148,7 +148,12 @@ export const store = {
         btnName:'contact me',
         before:'How to contact you?',
         tel:'+375 29 519-80-07',
-        mail:'contact@kandk.team' ,     
+        mail:'contact@kandk.team' ,
+        alert:{
+          success:'Data sent',
+          noMethodSelected:'No communication method selected',
+          invalidPhoneNumber:'Invalid phone number or number does not belong to mobile operators of Belarus',
+        },    
         messenger: [
           {
             name: 'telegram',
@@ -341,7 +346,12 @@ export const store = {
         btnName:'связаться со мной',
         before:'Как связаться с тобой?',
         tel:'+375 29 519-80-07',
-        mail:'contact@kandk.team' ,  
+        mail:'contact@kandk.team' , 
+        alert:{
+          success:'Данные отправлены',
+          noMethodSelected:'Не выбран способ связи',
+          invalidPhoneNumber:'Неверный номер телефона или  номер не принадлежит операторам сотовой связи РБ',
+        },  
         messenger: [
           {
             name: 'telegram',

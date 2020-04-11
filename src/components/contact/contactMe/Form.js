@@ -12,8 +12,7 @@ export default function Form(props) {
 
       <PhoneInput
         value={props.value}
-        onChange={props.handlePhoneChange}
-        
+        onChange={props.handlePhoneChange}        
       />
 
       <ContactMethod 
@@ -26,7 +25,8 @@ export default function Form(props) {
         btnName={props.btnName}
         type='button'
         classN='btn contact__btn'
-        form='contactMe' />
+        form='contactMe'           
+        />
 
     </form>
   )
