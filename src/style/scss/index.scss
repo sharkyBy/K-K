@@ -35,9 +35,7 @@
   // font-family: OpenSans_Light;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
   max-width: 1920px;
@@ -59,11 +57,16 @@ body {
   padding: 0 20px;
   height: 55px;
   background: transparent;
-  outline-style: none;
+  // outline-style: none;
   font-size: 24px;
   font-family: OpenSans_SemiBold;
   cursor: pointer;
   border-radius: 8px;
+
+  &::-moz-focus-inner 
+  {
+    border: 0;
+  }
 
   &::first-letter {
     text-transform: uppercase;
@@ -112,6 +115,7 @@ body {
       height: 100%;
       margin-right: 38px;
       z-index: 1;
+      
 
       &::before {
         display: block;
@@ -132,6 +136,7 @@ body {
         text-decoration: none;
         color: $color-nav;
         font-family: OpenSans_Regular;
+        outline-style: none;
 
         &::first-letter {
           text-transform: uppercase;
@@ -149,6 +154,7 @@ body {
     border: 1px solid $border-contactButton;
     color: $color-contactButton;
     margin-right: 34px;
+    
 
     &:hover {
       border: 1px solid rgba(255, 255, 255, 0.7);
@@ -296,6 +302,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    outline-style: none; // deleted border for firefox
 
     // border: 1px solid yellow;
     div {
@@ -328,7 +335,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: rgb(0, 0, 0); /* Fallback color */
+  
   background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 
   ul {
@@ -353,6 +360,7 @@ body {
         align-items: center;
         width: 100%;
         height: 100%;
+        
 
         img {
           display: block;
@@ -621,7 +629,7 @@ body {
     width: 45%;
     height: 100%;
     background: rgb(255, 255, 255);
-    box-shadow: 0px 0px 60px rgba(108, 99, 255, 0.3);
+    box-shadow: 0px 0px 30px rgba(108, 99, 255, 0.3);
     border-radius: 8px;
 
     h2 {

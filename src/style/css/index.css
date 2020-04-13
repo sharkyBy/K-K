@@ -26,10 +26,6 @@
   font-family: OpenSans_Regular;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   max-width: 1920px;
   width: 100%;
@@ -50,11 +46,13 @@ body {
   padding: 0 20px;
   height: 55px;
   background: transparent;
-  outline-style: none;
   font-size: 24px;
   font-family: OpenSans_SemiBold;
   cursor: pointer;
   border-radius: 8px;
+}
+.btn::-moz-focus-inner {
+  border: 0;
 }
 .btn::first-letter {
   text-transform: uppercase;
@@ -117,6 +115,7 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   font-family: OpenSans_Regular;
+  outline-style: none;
 }
 .navigation__link li a::first-letter {
   text-transform: uppercase;
@@ -249,6 +248,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  outline-style: none;
 }
 .arrow a div {
   position: absolute;
@@ -275,8 +275,6 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.8);
   /* Black w/ opacity */
 }
@@ -521,7 +519,7 @@ body {
   width: 45%;
   height: 100%;
   background: white;
-  box-shadow: 0px 0px 60px rgba(108, 99, 255, 0.3);
+  box-shadow: 0px 0px 30px rgba(108, 99, 255, 0.3);
   border-radius: 8px;
 }
 .contact__form h2 {
