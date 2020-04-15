@@ -5,6 +5,7 @@ import ContactMethod from './ContactMethod';
 
 export default function Form(props) {
   
+  
   // debugger;
   return (
     <form className="contact__form" name='contactMe'>
@@ -12,12 +13,14 @@ export default function Form(props) {
 
       <PhoneInput
         value={props.value}
-        onChange={props.handlePhoneChange}        
+        onChange={props.handlePhoneChange} 
+        borderColor={props.borderColor.phoneLine}       
       />
 
       <ContactMethod 
         before={props.before}        
-        contactMethod={props.contactMethod}       
+        contactMethod={props.contactMethod}
+        borderColor={props.borderColor.methodLine}         
       />
 
       <Button

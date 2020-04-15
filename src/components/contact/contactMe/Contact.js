@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import ContactMessenger from './ContactMessenger';
 import Form from './Form';
 import ContactInfo from './ContactInfo';
 import validator from 'validator';
@@ -8,10 +7,15 @@ import validator from 'validator';
 
 export default function Contact(props) {
   //  debugger;
-  const [phone, setPhone] = useState('');
-  const [callMe, setCallMe] = useState({ color: 'rgb(47,128,237)', id: 'callMe' });
+  const [phone, setPhone] = useState({number:'', addClass:''});
+  const [callMe, setCallMe] = useState({ color: '', id: '' });
   const [messageMe, setMessageMe] = useState({ color: '', id: '' });
+  const [borderColor, setBorderColor] = useState({phoneLine:'', methodLine:''});
  
+  const userContact = {
+    phone: '',
+    contactMe: '',
+  }
   
 
   const handleContactMethodClick = (e) => {
@@ -28,6 +32,7 @@ export default function Contact(props) {
       default:
         console.log("Неизвестное решение");
     };
+    setBorderColor({phoneLine:'', methodLine:''})
     return val;
   };
   // console.log(callMe,messageMe);
@@ -51,59 +56,63 @@ export default function Contact(props) {
   ];
 
 
-  const handlePhoneChange = e => {    
-    setPhone(e.target.value);
+  const handlePhoneChange = e => { 
+    
+    setBorderColor({phoneLine:'', methodLine:''});
+    
     //подсвечиваем поле инпута при положительной проверке **********
     let digit = e.target.value;
-    let elem = e.currentTarget;
+    setPhone({number:digit, classN:''});
+    
     // console.log(`phone was changed`, digit);
 
     if (validator.isMobilePhone(digit.replace(/\D/g, ""), 'be-BY')) {
-      elem.classList.add('validSuccess');
+      
+      setPhone({number:digit, classN: 'validSuccess'});
     } else {      
-      elem.classList.remove('validSuccess');     
+      
+      setPhone({number:digit, classN: ''});    
     }
 
     // ************** конец блока подсветки поля ********************
   };
 
-  // const handlePhoneBlur = e => {
-  //   let elem = e.currentTarget;    
-  //   // elem.classList.remove('validSuccess'); 
-  // }
+  
 
   const val = (callMe.id !== messageMe.id && callMe.id !== '' ? callMe.id : messageMe.id);
-  let phoneNumber = `+${phone.replace(/\D/g, "")}`;
+  let phoneNumber = phone.number.replace(/\D/g, "");
+  // console.log(phone)
 
 
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    let inputPhone = document.querySelector('#telephone')
+    console.log(phoneNumber);
+    e.preventDefault();    
 
-    const userContact = {
-      phone: '',
-      contactMe: '',
-    }
+    
 
     if (validator.isMobilePhone(phoneNumber, 'be-BY') && val !== '') {      
       
-      userContact.phone = phoneNumber;
+      userContact.phone = phone.number;
       userContact.contactMe = val;
-      setPhone('');
-      inputPhone.classList.remove('validSuccess');
-      alert(props.alert.success);
-      return userContact;
-      //{отправить объект}
+
+      setPhone({number:'', classN:''});
+      callMe.id !== "" ? setCallMe({color:'', id:''}):setMessageMe({color:'', id:''});
+      setBorderColor({phoneLine:'', methodLine:''})
+
+      alert(props.alert.success);     
+      
 
     } else if (validator.isMobilePhone(phoneNumber, 'be-BY') && val === '') {
       alert(props.alert.noMethodSelected);
+      setBorderColor({phoneLine:'', methodLine:'red'});
     } else {
-      alert(props.alert.invalidPhoneNumber)
+      alert(props.alert.invalidPhoneNumber);
+      setBorderColor({phoneLine:'red', methodLine:''});
     }
 
     console.log(userContact);
-
+    return userContact;
   };
 
 
@@ -119,6 +128,8 @@ export default function Contact(props) {
           handlePhoneChange={handlePhoneChange}
           handleSubmit={handleSubmit}          
           className='btn contact__btn'
+          borderColor={borderColor}
+          // userContact={userContact}
         />
 
         <ContactInfo

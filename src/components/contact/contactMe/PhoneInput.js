@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import InputElement from 'react-input-mask';
 
 export default function PhoneInput(props) {
+  // let isValid = props.borderColor === true ? 'red':false;
   return (
     <Fragment>
       <InputElement
@@ -10,8 +11,11 @@ export default function PhoneInput(props) {
         required="required"
         type='tel'
         id='telephone'
-        value={props.value}
+        value={props.value.number}
+        className={props.value.classN}
         onChange={props.onChange}
+        style={{borderColor: props.borderColor}}
+        
        
       />
     </Fragment>

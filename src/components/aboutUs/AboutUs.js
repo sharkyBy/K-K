@@ -6,7 +6,7 @@ import AboutUsText from './AboutUsText';
 
 class AboutUs extends React.Component {
   // debugger;
-  componentWillMount() {
+  componentWillUnmount() {
     configureAnchors({ offset: 0, scrollDuration: 600 })
   }
   render() {
