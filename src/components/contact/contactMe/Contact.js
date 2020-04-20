@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from './Form';
 import ContactInfo from './ContactInfo';
 import validator from 'validator';
+import {ajaxSend} from '../../../function/ajaxSend';
 
 
 
@@ -30,7 +31,7 @@ export default function Contact(props) {
         setCallMe({ color: '', id: '' });
         break;
       default:
-        console.log("Неизвестное решение");
+        console.log("Error");
     };
     setBorderColor({phoneLine:'', methodLine:''})
     return val;
@@ -38,7 +39,7 @@ export default function Contact(props) {
   // console.log(callMe,messageMe);
 
 
-
+// сгруппированы некоторые свойства для передачи на форму
   const contactMethod = [
     {
       id: 'callMe',
@@ -55,16 +56,14 @@ export default function Contact(props) {
     },
   ];
 
-
+// Обработчик поля ввода телефона
   const handlePhoneChange = e => { 
     
-    setBorderColor({phoneLine:'', methodLine:''});
-    
-    //подсвечиваем поле инпута при положительной проверке **********
     let digit = e.target.value;
     setPhone({number:digit, classN:''});
-    
-    // console.log(`phone was changed`, digit);
+
+    //подсвечиваем поле инпута при положительной проверке **********
+    setBorderColor({phoneLine:'', methodLine:''});
 
     if (validator.isMobilePhone(digit.replace(/\D/g, ""), 'be-BY')) {
       
@@ -78,30 +77,20 @@ export default function Contact(props) {
   };
 
   
-
-  const val = (callMe.id !== messageMe.id && callMe.id !== '' ? callMe.id : messageMe.id);
-  let phoneNumber = phone.number.replace(/\D/g, "");
-  // console.log(phone)
-
-
-
-  const handleSubmit = (e) => {
-    console.log(phoneNumber);
+  const handleSubmit = (e) => {    
     e.preventDefault();    
-
-    
+    const val = (callMe.id !== messageMe.id && callMe.id !== '' ? callMe.id : messageMe.id);
+    let phoneNumber = phone.number.replace(/\D/g, "");
+    console.log(phoneNumber);
+    const success = props.alert.success;
 
     if (validator.isMobilePhone(phoneNumber, 'be-BY') && val !== '') {      
-      
       userContact.phone = phone.number;
-      userContact.contactMe = val;
-
-      setPhone({number:'', classN:''});
+      userContact.contactMe = val;      
       callMe.id !== "" ? setCallMe({color:'', id:''}):setMessageMe({color:'', id:''});
-      setBorderColor({phoneLine:'', methodLine:''})
-
-      alert(props.alert.success);     
-      
+      setPhone({number:'', classN:''});
+      setBorderColor({phoneLine:'', methodLine:''});
+      return ajaxSend(userContact, success);
 
     } else if (validator.isMobilePhone(phoneNumber, 'be-BY') && val === '') {
       alert(props.alert.noMethodSelected);
@@ -111,8 +100,7 @@ export default function Contact(props) {
       setBorderColor({phoneLine:'red', methodLine:''});
     }
 
-    console.log(userContact);
-    return userContact;
+    return;
   };
 
 
@@ -129,7 +117,7 @@ export default function Contact(props) {
           handleSubmit={handleSubmit}          
           className='btn contact__btn'
           borderColor={borderColor}
-          // userContact={userContact}
+          
         />
 
         <ContactInfo
@@ -142,3 +130,4 @@ export default function Contact(props) {
   );
 
 }
+

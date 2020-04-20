@@ -1,7 +1,7 @@
 import React from 'react';
 import PartnerLogo from './PartnerLogo';
 import Arrow from '../Arrow';
-import { Route } from 'react-router';
+
 
 export default function HeaderContent(props) {
   return (
