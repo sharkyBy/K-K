@@ -150,7 +150,7 @@ export const store = {
         tel:'+375 29 519-80-07',
         mail:'contact@kandk.team' ,
         alert:{
-          success:'Data sent',
+          success:'Data send',
           noMethodSelected:'No communication method selected',
           invalidPhoneNumber:'Invalid phone number or number does not belong to mobile operators of Belarus',
         },    

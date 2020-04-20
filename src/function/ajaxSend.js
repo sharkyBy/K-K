@@ -1,6 +1,8 @@
+
+
 export function ajaxSend(formData, success) {
   console.log(formData)
-  fetch('mail.php', { // файл-обработчик
+  fetch('localhost:3001/', { // файл-обработчик
       method: 'POST',
       headers: {
           'Content-Type': 'application/json', // отправляемые данные
