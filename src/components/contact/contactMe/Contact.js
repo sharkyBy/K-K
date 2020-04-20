@@ -81,7 +81,7 @@ export default function Contact(props) {
     e.preventDefault();    
     const val = (callMe.id !== messageMe.id && callMe.id !== '' ? callMe.id : messageMe.id);
     let phoneNumber = phone.number.replace(/\D/g, "");
-    console.log(phoneNumber);
+    // console.log(phoneNumber);
     const success = props.alert.success;
 
     if (validator.isMobilePhone(phoneNumber, 'be-BY') && val !== '') {      
